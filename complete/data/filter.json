@@ -1,0 +1,101 @@
+﻿[
+	{
+		"name": "Eason",
+		"age": 37,
+		"skill": [
+			"JQuery",
+			"API"
+		],
+		"title": "前端程式",
+		"year": 3
+	},
+	{
+		"name": "Johnny",
+		"age": 28,
+		"skill": [
+			"HTML",
+			"CSS"
+		],
+		"title": "網頁設計師",
+		"year": 2
+	},
+	{
+		"name": "Brendar",
+		"age": 31,
+		"skill": [
+			"JavaScript",
+			"jQuery"
+		],
+		"title": "前端工程師",
+		"year": 5
+	},
+	{
+		"name": "Teresa",
+		"age": 26,
+		"skill": [
+			"Excel",
+			"Power Point"
+		],
+		"title": "行政助理",
+		"year": 1
+	},
+	{
+		"name": "Mark",
+		"age": 26,
+		"skill": [
+			"Word",
+			"Outlook"
+		],
+		"title": "業務助理",
+		"year": 2
+	},
+	{
+		"name": "Alinta",
+		"age": 30,
+		"skill": [
+			"ASP.NET",
+			"SQL"
+		],
+		"title": "後端工程師",
+		"year": 6
+	},
+	{
+		"name": "Oscar",
+		"age": 35,
+		"skill": [
+			"專案管理"
+		],
+		"title": "經理",
+		"year": 10
+	},
+	{
+		"name": "Ivy",
+		"age": 28,
+		"skill": [
+			"DBA",
+			"SQL"
+		],
+		"title": "資料管理師",
+		"year": 4
+	},
+	{
+		"name": "Eddie",
+		"age": 25,
+		"skill": [
+			"HTML",
+			"JavaScript"
+		],
+		"title": "網頁設計師",
+		"year": 1
+	},
+	{
+		"name": "Jim",
+		"age": 29,
+		"skill": [
+			"Word",
+			"Excel"
+		],
+		"title": "業務",
+		"year": 3
+	}
+]

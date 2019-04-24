@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>徐琮偉作品集：jq外卦引用</title>
+	<link href="css/big_view.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.1.12.4.min.js" type="text/javascript"></script>
+	<script src="js/e-smart-zoom-jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="mmMasker"></div>
+	<div class="msg">請在圖片上以滑鼠：<br/>1. 滾動滾輪，以操作圖片縮放<br/>2. 左鍵以拖曳</div>
+	<div id="imgContainer">
+		<img id="imageFullScreen" src="img/mvmv/post1.jpg"/>
+	</div>
+	<!-- <a href="" class="mdbBigViewPre"></a>
+	<a href="" class="mdbBigViewNex"></a>
+	<a href="" class="mdbBigViewList">103/120</a> -->
+	<!-- <a href="#" class="mdbBigViewClose"></a> -->
+
+	<script>
+		$(function(){
+			// pinch zoom
+			$('#imageFullScreen').smartZoom({'containerClass':'zoomableContainer'});
+
+			$('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
+				$('#zoomInButton,#zoomOutButton').bind("click", zoomButtonClickHandler);
+
+			function zoomButtonClickHandler(e){
+				var scaleToAdd = 0.8;
+				if(e.target.id == 'zoomOutButton')
+					scaleToAdd = -scaleToAdd;
+				$('#imageFullScreen').smartZoom('zoom', scaleToAdd);
+			}
+
+			function moveButtonClickHandler(e){
+				var pixelsToMoveOnX = 0;
+				var pixelsToMoveOnY = 0;
+
+				switch(e.target.id){
+					case "leftPositionMap":
+						pixelsToMoveOnX = 50;	
+					break;
+					case "rightPositionMap":
+						pixelsToMoveOnX = -50;
+					break;
+					case "topPositionMap":
+						pixelsToMoveOnY = 50;	
+					break;
+					case "bottomPositionMap":
+						pixelsToMoveOnY = -50;	
+					break;
+				}
+				$('#imageFullScreen').smartZoom('pan', pixelsToMoveOnX, pixelsToMoveOnY);
+
+				
+			}
+
+		});
+	</script>
+</body>
+
+</html>

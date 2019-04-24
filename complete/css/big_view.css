@@ -1,0 +1,25 @@
+.mdbBigViewClose,.mdbBigViewList,.mdbBigViewPre,.mdbBigViewNex{opacity:.8;background-image:url('../img/mvmv/big_view_icon.png?1447993376');background-size:160px 200px;background-position:10px 0;background-repeat:no-repeat;display:block;position:fixed;z-index:1000}.mdbBigViewClose{width:80px;height:80px;background-position:7px -126px;top:0;right:0}.mdbBigViewList{text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;color:#fff;font-size:14px;width:55px;height:40px;padding-top:23px;background-position:-109px -148px;bottom:3%;left:15px}.mdbBigViewPre,.mdbBigViewNex{height:120px;width:80px;margin-top:-60px;top:50%}.mdbBigViewPre:hover,.mdbBigViewNex:hover,.mdbBigViewClose:hover,.mdbBigViewList:hover{opacity:1;text-decoration:none}.mdbBigViewPre{left:0}.mdbBigViewNex{right:0;background-position:-90px 0}#imgContainer{margin:auto;position:fixed;z-index:1000;top:0;right:0;left:0;bottom:0}#mdbBigViewMVmobi,#mdbBigViewMVmobi img,#mdbBigViewMVmobi span{margin:auto;position:fixed;z-index:1000;top:0;right:0;bottom:0;left:0}#mdbBigViewMVmobi{vertical-align:middle;max-width:94%;max-height:94%;line-height:100%}#mdbBigViewMVmobi img{display:block}#mdbBigViewMVmobi span{background:url("fourm.png", false, true) -24px -357px;background-repeat:no-repeat;background-size:1000px 500px;width:68px;height:48px}#mdbBigViewMV{display:block;max-width:94%;max-height:94%;overflow:hidden;margin:auto;position:fixed;z-index:1000;top:50%;left:0;bottom:0;right:0}.mmMasker{background:rgba(0,0,0,0.7);position:fixed;top:0;right:0;bottom:0;left:0}
+
+.msg{
+	color:#fff000;
+	position:fixed;
+	top:0;left:0;
+	padding:10px;
+	z-index:1001;
+	background-color:rgba(0,0,0,.7);
+	animation: hh 1s 0s linear infinite alternate forwards;
+	line-height: 1.5;
+	font-family: arial, "微軟正黑體";
+}
+@keyframes hh{
+	0%{color: #fff000;}
+	100%{color: #f00;}
+}
+
+#imageFullScreen{
+	animation: zooin .5s 0s linear 1 forwards;
+}
+@keyframes zooin{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}

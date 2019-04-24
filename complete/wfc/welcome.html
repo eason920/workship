@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<!-- SITE TITTLE -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>World Family Club 全台唯一兒童專屬美語俱樂部</title>
+	<!-- Icons -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--      [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]
+    -->
+	<!-- CSS FOR ALL -->
+	<link href="assets/plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- template -->
+	<link href="css/app.css" rel="stylesheet">
+	<link id="option_color" href="css/default.css" rel="stylesheet">
+	<!-- IT-->
+	<link href="css/layout.css" rel="stylesheet">
+	<!-- jq -->
+	<script src="assets/plugins/jquery/jquery-min.js"></script>
+	<!-- CSS FRO THIS PAGE ONLY-->
+	<link rel="stylesheet" href="css/welcome.css">
+</head>
+
+<body class="body-wrapper">
+	<div class="main-wrapper">
+		<!--
+      ====================================
+      ——— HEADER
+      =====================================
+      -->
+		<header class="header-wrapper" id="pageTop">
+
+			<!-- COLOR BAR-->
+			<div class="container-fluid color-bar top-fixed clearfix">
+				<div class="row">
+					<div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+					<div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+				</div>
+			</div>
+			<!-- LOG BAR PC-->
+			<div class="top-info-bar hidden-xs">
+				<div class="container">
+					<div class="logbar-pc"><a class="logbar-pc-link" href="#loginModal" data-toggle="modal">約定轉帳</a>
+						<div class="logbar-spacer"></div>
+						<div class="logbar-pc-out"><a class="logbar-pc-link" href="#">登入</a><a class="logbar-pc-link"
+								href="https://q4u.worldfamily.com.tw/landing4/LandingP4r_0806.aspx?source=wf-wfc"
+								target="_blank">申請</a><a class="logbar-pc-link" href="#">忘記密碼</a></div>
+						<div class="logbar-pc-in" style="display: none;"><span class="logbar-pc-welcome">某某人 您好﹗</span><a
+								class="logbar-pc-link" href="#">登出</a></div>
+						<div class="logbar-spacer"></div><a class="logbar-pc-link" href="#">美語叔叔阿姨</a><a
+							class="logbar-pc-link" href="#">Zippy 家族</a>
+						<div class="logbar-spacer"></div>
+						<div class="logbar-pc-share"><a class="logbar-pc-link logbar-pc-share-fb" href="#"><i
+									class="fa fa-facebook" aria-hidden="true"></i></a><a
+								class="logbar-pc-link logbar-pc-share-ig" href="#"><i class="fa fa-instagram"
+									aria-hidden="true"></i></a></div>
+					</div>
+				</div>
+			</div> <!-- NAVBAR-->
+			<nav class="navbar navbar-default lightHeader" id="menuBar" role="navigation">
+				<div class="container">
+					<!-- NAVBAR LOGO-->
+					<div class="navbar-header">
+						<button class="navbar-toggle layout-navbar-arrow-mobi" type="button" data-toggle="collapse"
+							data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span><span
+								class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a
+							class="navbar-brand" href="index.html"><img src="img/logo-wfc.png" /></a>
+					</div>
+					<!-- NAVBAR COLLAPSE-->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<!-- LOG BAR MOBI-->
+							<li class="logbar-m-visibility">
+								<div class="logbar-m">
+									<div class="logbar-m-row1"><a class="logbar-m-link" href="#loginModal"
+											data-toggle="modal">約定轉帳</a>
+										<div class="logbar-spacer"></div>
+										<div class="logbar-m-out" style="display: ;"><a class="logbar-m-link" href="#">登入</a><a
+												class="logbar-m-link"
+												href="https://q4u.worldfamily.com.tw/landing4/LandingP4r_0806.aspx?source=wf-wfc"
+												target="_blank">申請</a><a class="logbar-m-link" href="#">忘記密碼</a></div>
+										<div class="logbar-m-in" style="display: none;"><span class="logbar-m-welcome">某某人
+												您好﹗</span><a class="logbar-m-link" href="#">登出</a></div>
+									</div>
+									<div class="logbar-m-row2"><a class="logbar-m-link" href="#">美語叔叔阿姨</a><a
+											class="logbar-m-link" href="#">Zippy 家族</a>
+										<div class="logbar-spacer"></div>
+										<div class="logbar-m-share"><a class="logbar-m-link logbar-m-share-fb" href="#"><i
+													class="fa fa-facebook" aria-hidden="true"></i></a><a
+												class="logbar-m-link logbar-m-share-ig" href="#"><i class="fa fa-instagram"
+													aria-hidden="true"></i></a></div>
+									</div>
+								</div>
+							</li>
+							<!-- 1-->
+							<li class="dropdown singleDrop layout-navbar-arrow-pc color-1">
+								<!-- open--><a class="dropdown-toggle navbar-menu-1" href="" data-toggle="dropdown"
+									role="button" aria-haspopup="true" aria-expanded="false"><span
+										class="navbar-title">美語活動</span></a>
+								<ul class="dropdown-menu dropdown-menu-left">
+									<!-- 1.1-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">美語嘉年華</a></li>
+									<!-- 1.2-->
+									<li class="dropdown dropdown-submenu">
+										<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown">週末活動<i
+												class="fa fa-chevron-right" aria-hidden="true"></i></a>
+										<ul class="dropdown-menu">
+											<!-- 1.2.1-->
+											<li><a href="">跟著玩活動</a></li>
+											<!-- 1.2.2-->
+											<li><a href="">Froggy和Bunny點點名</a></li>
+											<!-- 1.2.3	-->
+											<li><a href="">布偶劇場</a></li>
+											<!-- 1.2.4-->
+											<li><a href="">人偶秀</a></li>
+											<!-- 1.2.5-->
+											<li><a href="">CAP 童歡會</a></li>
+										</ul>
+									</li>
+									<!-- 1.3-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">迷你活動<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+										<ul class="dropdown-menu">
+											<!-- 1.3.1-->
+											<li><a href="#">寶貝玩玩</a></li>
+											<!-- 1.3.2-->
+											<li><a href="#">來趣玩活動</a></li>
+											<!-- 1.3.3-->
+											<li><a href="#">翻轉小世界</a></li>
+										</ul>
+									</li>
+									<!-- 1.4-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">營隊活動</a></li>
+								</ul>
+							</li>
+							<!-- 2-->
+							<li class="dropdown singleDrop layout-navbar-arrow-pc color-2">
+								<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown" data-hover="dropdown"
+									data-delay="300" data-close-others="true" aria-expanded="false"><span
+										class="navbar-title">美語學習</span></a>
+								<ul class="dropdown-menu dropdown-menu-left">
+									<!-- 2.1-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">Face Call</a></li>
+									<!-- 2.2-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">電話美語</a></li>
+									<!-- 2.4-->
+									<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+											data-toggle="dropdown">WF Club Library</a></li>
+									<!-- 2.6-->
+									<li class="dropdown dropdown-submenu">
+										<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown">CAP 親子學習計畫<i
+												class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left"
+												aria-hidden="true"></i></a>
+										<ul class="dropdown-menu">
+											<!-- 2.6.1-->
+											<li><a href="#">記錄作業</a></li>
+											<!-- 2.6.2-->
+											<li><a href="#">錄音作業</a></li>
+										</ul>
+									</li>
+									<!-- 2.7-->
+									<li class="dropdown dropdown-submenu">
+										<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown">DWE 畢業<i
+												class="fa fa-chevron-right" aria-hidden="true"></i></a>
+										<ul class="dropdown-menu">
+											<!-- 2.7.1-->
+											<li><a href="#">畢業榮譽榜</a>
+												<!-- 2.7.1.1 is 歷屆畢業生-->
+												<!-- 2.7.2-->
+											<li><a href="#">劍橋榮譽榜</a></li>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						</li>
+						<!-- 3-->
+						<li class="dropdown singleDrop layout-navbar-arrow-pc color-3"><a class="dropdown-toggle" href=""
+								data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true"
+								aria-expanded="false"><span class="navbar-title">多媒體學習</span></a>
+							<ul class="dropdown-menu dropdown-menu-left dropdown-submenu-left-mg-lg">
+								<!-- 3.1-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">Super Fun</a></li>
+								<!-- 3.2-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">歡樂TV</a></li>
+								<!-- 3.3-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">ABC Channel</a></li>
+								<!-- 3.4-->
+								<li class="dropdown dropdown-submenu nav-mobi-hidden"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">美語遊戲</a></li>
+								<!-- 3.5-->
+								<li class="dropdown dropdown-submenu nav-mobi-hidden"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">美語故事</a></li>
+							</ul>
+						</li>
+						<!-- 4-->
+						<li class="dropdown singleDrop layout-navbar-arrow-pc color-4"><a class="dropdown-toggle" href=""
+								data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span
+									class="navbar-title">會員服務</span></a>
+							<ul class="dropdown-menu dropdown-menu-right dropdown-submenu-left-mg-lg">
+								<!-- 4.1-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">會員交流園地</a></li>
+								<!-- 4.2-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">親子教育百科</a></li>
+								<!-- 4.3-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">會員經驗分享</a></li>
+								<!-- 4.4-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">世界育兒觀</a></li>
+								<!-- 4.5-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">寰宇家庭雜誌</a></li>
+								<!-- 4.6-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">家長工作坊</a></li>
+							</ul>
+						</li>
+						<!-- 5-->
+						<li class="dropdown singleDrop layout-navbar-arrow-pc color-5">
+							<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false"><span class="navbar-title">我的專區</span></a>
+							<ul class="dropdown-menu dropdown-menu-right dropdown-submenu-left-mg-lg">
+								<!-- 5.1-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">新手上路</a></li>
+								<!-- 5.2-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">活動紀錄</a></li>
+								<!-- 5.3-->
+								<li class="dropdown dropdown-submenu">
+									<!-- open--><a class="dropdown-toggle" href="" data-toggle="dropdown">學習點數<i
+											class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-left"
+											aria-hidden="true"></i></a>
+									<ul class="dropdown-menu">
+										<!-- 5.3.1-->
+										<li><a href="#">學習點數</a></li>
+										<li><a href="#">兌換專區</a></li>
+									</ul>
+								</li>
+								<!-- 5.5-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">會員須知</a></li>
+								<!-- 5.6-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">常見問題</a></li>
+								<!-- 5.7-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">特別保證</a></li>
+								<!-- 5.9-->
+								<li class="dropdown dropdown-submenu"><a class="dropdown-toggle" href=""
+										data-toggle="dropdown">電子發票</a></li>
+							</ul>
+						</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+          ====================================
+          ——— BREAD CRUMB
+          =====================================
+          -->
+				<div class="layout-breadcrumb-box">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb text-truncate">
+								<li class="breadcrumb-item"><a href="#">首頁</a></li>
+								<li class="breadcrumb-item">我的專區</li>
+								<li class="breadcrumb-item">新手上路</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- aside + main-->
+		<div class="container container-main container-col-2">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-3 sticky-top aside-lb">
+					<div class="panel-heading bg-color-5 border-color-5">
+						<h3 class="panel-title">我的專區 </h3>
+						<div class="aside-lb-close">x</div>
+					</div>
+					<aside class="layout-sub px-4 py-4 aside-file">
+						<div class="aside-file-title">會員資料</div>
+						<button class="btn layout-btn aside-file-btn" type="button">修改個人資料</button>
+						<div class="aside-file-img" style="background-image: url(img/no_picture.png);"></div>
+						<div class="aside-file-msg">鐵腕 老爸 ( S516888 )</div>
+					</aside>
+					<aside class="layout-sub px-4 py-4">
+						<ul class="art-list-f2">
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">我的專區</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">新手上路</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">活動學習紀錄</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">學習點數</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">會員須知</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">常見問題</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">特別保證</a></li>
+							<li class="art-list-f2-item"><a class="art-list-f2-link" href="">電子發票</a></li>
+						</ul>
+					</aside>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-9 scroll-main">
+					<h3>說明：下方影片列表的瀏覽，於行動載具是以 slide 達成橫向瀏覽；而到桌機則於列表左右兩側提供按鈕，以 click 達成橫向瀏覽</h3>
+					<div class="layout-main layout-deco-title">
+						<div class="aside-lb-open">
+							<div class="aside-lb-hamber"></div>
+							<div class="aside-lb-hamber"></div>
+							<div class="aside-lb-hamber"></div>
+						</div> <!-- LEVEL 1-->
+						<div class="vbox-outer target1">
+							<h3 class="layout-title-level-2 color-5">新手會員加油站</h3><a class="vbox-pre" href="#"><i
+									class="fa fa-arrow-left"></i></a>
+							<div class="vbox mb-5">
+								<ul class="vbox-list">
+									<li class="vbox-item">
+										<img src="img/welcome/01.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">書櫃組合</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+										<img src="img/welcome/02.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">書本CD/ DVD上架</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+										<img src="img/welcome/03.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">迪士尼美語世界使用說明「入門篇」</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/04.jpg">
+
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">迪士尼美語世界使用說明「進階篇」</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/05.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">寰宇家庭會員服務使用說明</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div><a class="vbox-nex" href="#"><i class="fa fa-arrow-right"></i></a>
+						</div>
+						<div class="vbox-outer target2">
+							<h3 class="layout-title-level-2 color-5">成功的第一步</h3><a class="vbox-pre" href="#"><i
+									class="fa fa-arrow-left"> </i></a>
+							<div class="vbox mb-5">
+								<ul class="vbox-list">
+									<li class="vbox-item">
+										<img src="img/welcome/11.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">七大竅門</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/12.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">支援服務一</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/13.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">支援服務二</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/14.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">多元學習</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/15.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">延伸教材</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div><a class="vbox-nex" href="#"><i class="fa fa-arrow-right"> </i></a>
+						</div>
+						<div class="vbox-outer target3">
+							<h3 class="layout-title-level-2 color-5">產品使用小撇步</h3><a class="vbox-pre" href="#"><i
+									class="fa fa-arrow-left"></i></a>
+							<div class="vbox mb-5">
+								<ul class="vbox-list">
+									<li class="vbox-item">
+
+										<img src="img/welcome/21.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">米奇魔法師使用方式</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/22.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">使用說明延伸篇「米奇趣味互動學習」</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/23.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">使用說明延伸篇「探索互動學習」</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/24.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">延伸系統說明「魔幻遊戲百變卡」</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/25.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">親子互動小技巧_Fill Up the Cup</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div><a class="vbox-nex" href="#"><i class="fa fa-arrow-right"></i></a>
+						</div>
+						<div class="vbox-outer target4">
+							<h3 class="layout-title-level-2 color-5">寰宇家庭俱樂部</h3><a class="vbox-pre" href="#"><i
+									class="fa fa-arrow-left"></i></a>
+							<div class="vbox mb-5">
+								<ul class="vbox-list">
+									<li class="vbox-item">
+
+										<img src="img/welcome/31.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">One World</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/32.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">It's Fun</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/33.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">Be My Friend</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/34.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">World Family Club Library 介紹</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/35.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">Face Call 使用方式</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/11.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">如何繳交CAP紀錄作業</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/12.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">如何繳交CAP錄音作業</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/13.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">CAP親子學習計畫 錄音方式</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+										<img src="img/welcome/14.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">美語嘉年華</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/15.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">跟著玩活動</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/15.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">布偶劇場</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/21.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">Froggy和Bunny點點名</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/22.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">Zippy人偶秀</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/23.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">CAP童樂會</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/24.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">寶貝玩玩</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/25.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">來趣玩活動</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+
+										<img src="img/welcome/31.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">翻轉小世界</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/32.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">全美語夏令營</div>
+											</div>
+										</div>
+									</li>
+									<li class="vbox-item">
+
+										<img src="img/welcome/33.jpg">
+										<div class="vbox-table">
+											<div class="vbox-cell">
+												<div class="vbox-msg">畢業典禮</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div><a class="vbox-nex" href="#"><i class="fa fa-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--   ====================================
+——— LIGHT BOX MODAL
+===================================== 
+-->
+		<div class="modal fade customModal" id="welBox" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Super Fun! With Luna!</h3><a class="panel-close" href="">x</a>
+						</div>
+						<div class="panel-body">
+
+							<iframe src="https://player.vimeo.com/video/243244233" frameborder="0" webkitallowfullscreen=""
+								mozallowfullscreen="" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="aa bb">aa bb</div>
+
+	<footer>
+		<!-- FOOTER INFO AREA -->
+		<div class="container-fluid color-bar clearfix">
+			<div class="row">
+				<div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+				<div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+				<div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+				<div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+				<div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+				<div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+				<div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+				<div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+				<div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+				<div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+				<div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+				<div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+			</div>
+		</div>
+		<!-- COPY RIGHT -->
+		<div class="copyRight clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="copyRightText">
+							<p>寰宇家庭股份有限公司(台灣)版權所有</p>
+							<p class="copyRightTextEng">© World Family(Taiwan) Ltd. All Rights Reserved.</p>
+						</div>
+					</div>
+					<div class="col-sm-6 footer-link">
+						<ul>
+							<li><a href="">關於寰宇家庭俱樂部</a></li>
+							<li><a href="">關於寰宇家庭</a></li>
+							<li><a href="">隱私權與安全性</a></li>
+							<li><a href="">版權聲明</a></li>
+							<li><a href="">條款與政策</a></li>
+							<li> <a href="">網站地圖</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--   ====================================
+——— TAB MENU FOR TAIWAN
+===================================== 
+-->
+	<ul class="tabmenu">
+		<li class="tabmenu-li tabmenu-1"><a class="tabmenu-link" href=""><i class="fas fa-cog"></i>設定</a></li>
+		<li class="tabmenu-li tabmenu-2"><a class="tabmenu-link" href="">線上客服</a></li>
+		<li class="tabmenu-li tabmenu-3"><a class="tabmenu-link" href="">活動報名</a></li>
+		<li class="tabmenu-li tabmenu-4"><a class="tabmenu-link" href="">最新消息</a></li>
+		<li class="tabmenu-li tabmenu-5"><a class="tabmenu-link" href="">下載專區</a></li>
+	</ul>
+	<!--   ====================================
+——— BACK TO TOP
+===================================== 
+-->
+	<div class="scrolling"><a class="backToTop" id="backToTop" href="#pageTop"><i class="fa fa-arrow-up"
+				aria-hidden="true"></i></a></div>
+	<!--====================================
+——— LOGIN MODAL
+===================================== 
+-->
+	<div class="modal fade customModal lightbox-usual" id="loginModal" tabindex="-1" role="dialog">
+		<!--  
+  [^ 註 ^]
+  規則：tag .customModal + class .lightbox-usual
+  為全站共用燈箱所用
+  
+  -->
+		<div class="modal-dialog layout-lightbox-vertical-middle">
+			<!--   
+    [^ 註 ^]
+    規則 : tag .modal-dialog + class .layout-lightbox-vertical-middle
+    將 pop window 垂直置中
+    
+    -->
+			<div class="modal-content">
+				<div class="panel">
+					<div class="panel-heading">
+						<h3 class="panel-title">會員登入</h3><a class="panel-close" href="">x</a>
+					</div>
+					<div class="panel-body">
+						<form action="#" method="POST" role="form">
+							<div class="form-group formField">
+								<input class="form-control" type="text" placeholder="請輸入會員編號" />
+							</div>
+							<div class="form-group formField">
+								<input class="form-control" type="password" placeholder="請輸入密碼" />
+							</div>
+							<div class="form-group ver-box"><img class="ver-img" src="img/verify.png" />
+								<input class="ver-reset" type="button" />
+								<input class="ver-input" type="text" placeholder="輸入驗證碼" />
+							</div>
+							<div class="form-group formField">
+								<input class="btn btn-block" type="submit" value="登入" />
+							</div>
+							<div class="form-group formField">
+								<p class="help-block"><a href="#forgetModal" data-toggle="modal">忘記密碼 ?</a>
+									<!--  href="#loginModal" data-toggle="modal" -->
+									<!--====================================
+                ——— FORGET PASSWORD MODAL
+                ===================================== 
+                -->
+									<div class="modal fade customModal lightbox-usual" id="forgetModal" tabindex="-1"
+										role="dialog">
+										<!--  
+                  [^ 註 ^]
+                  規則：tag .customModal + class .lightbox-usual
+                  為全站共用燈箱所用
+                  
+                  -->
+										<div class="modal-dialog layout-lightbox-vertical-middle">
+											<!--   
+                    [^ 註 ^]
+                    規則 : tag .modal-dialog + class .layout-lightbox-vertical-middle
+                    將 pop window 垂直置中
+                    
+                    -->
+											<div class="modal-content">
+												<div class="panel">
+													<div class="panel-heading">
+														<h3 class="panel-title">密碼查尋</h3><a class="panel-close" href="">x</a>
+													</div>
+													<div class="panel-body">
+														<form action="#" method="POST" role="form">
+															<div class="form-group formField">
+																<input class="form-control" type="text" placeholder="請輸入會員編號或身份證" />
+															</div>
+															<div class="form-group formField">
+																<input class="form-control" type="password" placeholder="請輸手機號碼" />
+															</div>
+															<div class="form-group formField">
+																<input class="btn btn-block" type="submit" value="確定" />
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jq -->
+	<script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- animate for back to top & fast link -->
+	<script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
+	<script src="assets/plugins/velocity/velocity.min.js"></script>
+	<!-- header dropdown controler -->
+	<script src="assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+	<!-- UI controler from template js/app.js -->
+	<script src="js/layout.js"></script> <!-- JS FOR THIS PAGE ONLY-->
+	<script src="js/tmpAsideLb.js"></script>
+	<script src="js/welcome.js"></script>
+	</div>
+</body>
+
+</html>

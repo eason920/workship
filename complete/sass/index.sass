@@ -1,0 +1,39 @@
+@import 'index/ol'
+@import 'index/menu'
+@import 'index/eason'
+body, html
+	font-family: arial, "微軟正黑體"
+
+body
+	margin: 0 10px
+	background-color: #ffe78e
+
+h1
+	margin: 25px 0 20px 10px
+
+.unit-title
+	margin: 5px 0 5px 10px
+	text-align: left
+	font-size: 1.5em
+	font-weight: bold
+
+
+.content
+	background-color: white
+	border-radius: 10px
+	padding: 20px
+	margin-bottom: 20px
+
+@media (max-width: 991px)
+	h1
+		font-size: 25px
+	.content
+		padding: 15px
+	
+	.eason-inbox
+		padding-left: 10px
+		ol
+			padding-left: 25px
+
+	.unit-title
+		font-size: 21px

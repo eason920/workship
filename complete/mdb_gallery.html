@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="img/mvmv/ico.ico" rel="shortcut icon">
+	<link href="img/mvmv/apple.jpg" rel="apple-touch-icon-precomposed">
+	<title>影劇圈圈 | 電影電視劇社群網</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+	<link href="css/mm_layout.css" rel="stylesheet" type="text/css">
+	<link href="css/mm_header_ui.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<style>
+	</style>
+	<link href="css/mdb/mdb_gallery.css" rel="stylesheet" type="text/css">
+	<link href="css/chat/mm_chat.css" rel="stylesheet" type="text/css">
+	<link href="css/passing/171001chat_frame_usual_add_img_video.css" rel="stylesheet" type="text/css">
+	<style>
+		/* 手機聊天室展開時天版位廣告 debug */
+		/*!171031*/
+		@media screen and (max-width: 767px) {
+			.mmms_header_01 a {
+				display: none
+			}
+		}
+
+		@media screen and (max-width: 479px) {
+			#mm_chat {
+				padding-top: calc(43px + 42px + 37px + 10px - 76px) !important
+			}
+		}
+
+		@media screen and (max-width: 1023px) {
+			.mdb_chat_box_mobi_title {
+				border-top: solid 2px #3092ca
+			}
+		}
+
+		/*# sourceMappingURL=chat_mobi_open_no_sky_ad.css.map */
+	</style>
+	<!-- v JS v -->
+	<script src="js/model_chat_mobi.js" type="text/javascript"></script>
+	<!-- @import "plugin/justifiedGallery" in mdb_gallery.css -->
+
+</head>
+
+<body>
+	<!-- 171110 -->
+	<div id="mmHeader" class="pc is-login is-search-bar-expand">
+		<!-- pc : logo 桌機用圖 AWD (若不寫就回歸預設的載具用圖) -->
+		<!-- is-login : 使藍天按鈕成為登入狀態-->
+		<!-- is-logout : 使藍天按鈕成為登出狀態 -->
+		<!-- is-search-bar-expand : 手機版時全站搜尋 bar 在 focus 時的展開狀態-->
+		<!-- mmHeaderRise : 僅侷限在討論板 B & C 頁藍天置換成白天時使用 -->
+		<!-- is-xmas : 活動 logo 聖誕節-->
+		<div class="wrapper">
+			<div id="mmHeaderCountBox">
+				<a href="" id="mmMenuSwitch" class="">
+					<!-- on -->
+					<span>88</span>
+					<div></div>
+				</a>
+				<a href="" id="mmLogo"></a>
+				<!-- 171113 -->
+				<!-- is-nowfunc 仍需後端判斷的電影&電視刻刻劇 -->
+				<a href="" class="mainMenu is-series is-nowfunc">電視劇</a><!-- mainOver is-nowfunc -->
+				<a href="" class="mainMenu is-movie">電影</a><!-- mainOver is-nowfunc -->
+				<a href="" class="mainMenu is-actor">演員</a><!-- mainOver -->
+				<a href="" class="mainMenu is-forum">討論圈</a><!-- mainOver -->
+				<!--a href="" class="mainMenu is-chat">聊天室</a-->
+				<!-- mainOver -->
+				<a href="" class="mainMenu is-shop">福利社</a><!-- mainOver -->
+			</div>
+			<div id="mmSearchBar">
+				<input type="text" placeholder="輸入作品名稱或關鍵字">
+				<a class="is-search-delete" href=""></a>
+				<a class="is-search-send" href=""></a>
+				<span></span>
+			</div>
+			<div id="mmLogIn">
+				<a href="" class="memInfo"><img src="img/mvmv/nameCard.jpg">
+					<p>壹貳参肆伍陸柒捌玖拾</p>
+				</a>
+				<a href="" class="noti"><span>3</span></a>
+				<a href="" class="pm"><span>5</span></a>
+				<a href="" class="logOut">登出</a>
+			</div>
+			<div id="mmLogOut">
+				<a href="" class="logMM">圈圈帳號登入</a>
+				<a href="" class="logFB">登入</a>
+				<div id="gSignInWrapper">
+					<div id="customBtn" class="customGPlusSignIn"><span class="icon"></span><span
+							class="buttonText logG">登入</span></div>
+				</div>
+				<a href="" class="register">註冊</a>
+				<a href="" class="logIn">登入</a>
+			</div>
+		</div>
+	</div>
+	<!-- <div id="mm_layout" class=""> -->
+	<!-- is-mobi-chat-open -->
+	<div id="mmheader_sort_bar" class="">
+		<!-- is-header-w-on -->
+		<!-- 171113 -->
+		<!-- is-nowfunc 仍需後端判斷的電影&電視刻刻劇 -->
+		<a href="" class="mainMenu is-series is-nowfunc">電視劇</a><!-- mainOver is-nowfunc -->
+		<a href="" class="mainMenu is-movie">電影</a><!-- mainOver is-nowfunc -->
+		<a href="" class="mainMenu is-actor">演員</a><!-- mainOver -->
+		<a href="" class="mainMenu is-forum">討論圈</a><!-- mainOver -->
+		<!--a href="" class="mainMenu is-chat">聊天室</a-->
+		<!-- mainOver -->
+		<a href="" class="mainMenu is-shop">福利社</a><!-- mainOver -->
+	</div>
+	<!-- <div class="mmms_header_01">
+		<a href="get">
+			<img class="mmms_header_01_img" src="img/mvmv/demo/sky_ad.png">
+		</a>
+	</div> -->
+	<div id="mmBody">
+		<div class="wrapper">
+			<div class="mmms_mdb_gallery_pc_01">
+				<!-- <img src="img/mvmv/demo/pmp_pc_n.png"> -->
+			</div>
+			<div id="mmMain">
+				<div class="mmms_mdb_gallery_pc_02">
+					<!-- <img src="img/mvmv/demo/pmp_pc_w.png" alt=""> -->
+				</div>
+				<div class="mdbTitle">
+					<div class="bread">
+						<a href="">首頁</a> &gt;
+						<a href="">腦筋急轉彎</a> &gt;
+						<a href="">圖片列表</a>
+					</div>
+					<div class="mdbListBack">
+						<p>回上層</p>
+						<b>腦筋急轉彎<i>(2016)</i></b>
+						<span>Inside Out</span>
+					</div>
+					<div class="title">
+						<h1>腦筋急轉彎 - 圖片列表</h1>
+						<div class="title_msg">
+							<p>40 張照片</p><a href="">編輯</a>
+						</div>
+					</div>
+				</div>
+				<div id="mdb_gallery">
+					<div id="mygallery">
+						<a href=""><img src="img/mvmv/mdb/mdbpost20.jpg" alt="volcano LAVA"></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost15.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost14.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost13.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost03.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost04.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost18.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost12.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost05.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost06.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost07.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost08.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost09.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost02.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost10.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost11.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost16.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost17.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost19.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost20.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost15.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost14.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost13.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost03.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost04.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost18.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost12.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost05.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost06.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost07.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost08.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost09.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost02.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost10.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost11.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost16.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost17.jpg" alt=""></a>
+						<a href=""><img src="img/mvmv/mdb/mdbpost19.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div id="mmSub">
+				<a href="" target="_blank" class="mmAD336"><img src="img/mvmv/forumAD.jpg"></a>
+				<!--
+	title
+	ui + masker
+	client
+-->
+				<div id="mdb_chat_box">
+					<h2 class="chattitle">
+						<!--span class="chattitle_name1">《一二三四五六七八九</span>
+	<span class="chattitle_name2">》聊天室</span-->
+						<!-- ^^ forum_c ^^vv mdb_c vv -->
+						<span class="chattitle_name1">聊天室</span>
+						<span class="chattitle_name2">腦筋急轉彎</span>
+						<!-- <a class="chattitle_link2" href="#"	onclick="window.open('chat_window.php', 'chat_pc', config='height=600,width=600');"></a> -->
+						<a href="" class="chattitle_link1">
+							<span class="chattitle_link1_icon"></span>
+							(<span class="chattitle_link1_num">3093</span>)
+						</a>
+					</h2>
+					<!--聊天文字列 #mm_chat
+    文字輸入框 #mm_chat_talk
+    回到最上方 #mm_chat_tonewest
+    防雷黑屏   #mm_chat_masker
+ -->
+					<div id="mm_chat_ui">
+						<div class="mm_chat_client_masker"></div>
+						<div id="mm_chat_outbox">
+							<p class="mm_chat_release">9/23 起 每週日 22 : 00 於 客家電視台 播出本劇</p>
+							<ul id="mm_chat" class="">
+								<!-- is-filter -->
+								<!-- is-ie-filter -->
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														這是第一則</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														都沒人點讚</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														我沒讚別人有讚</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-other">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number">23</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														我跟別人都有讚</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-both">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number">888</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<!-- mv -->
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">mv</a>
+													<span class="is-wordbox-content">
+														<br />
+														<a href="mv" class="is-wordbox-pic">
+															<img src="img/mvmv/mdb/mdb_mv08.jpg">
+														</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<!-- landscape -->
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">landscape</a>
+													<span class="is-wordbox-content">
+														<br />
+														<a href="mv" class="is-wordbox-pic is-wordbox-mv">
+															<img src="img/mvmv/mdb/mbb01.jpg">
+														</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<!-- box -->
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">box</a>
+													<span class="is-wordbox-content">
+														<br />
+														<a href="mv" class="is-wordbox-pic">
+															<img src="img/mvmv/mdb/mdb_box.png">
+														</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<!-- portrait -->
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">portrait</a>
+													<span class="is-wordbox-content">
+														<br />
+														<a href="mv" class="is-wordbox-pic is-wordbox-portrait">
+															<img src="img/mvmv/mdb/mdb76.jpg">
+														</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<!-- portrait -->
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">portrait</a>
+													<span class="is-wordbox-content">
+														<br />
+														<a href="mv" class="is-wordbox-pic is-wordbox-portrait  is-wordbox-mv">
+															<img src="img/mvmv/mdb/mdb77.jpg">
+														</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- ^^ try ^^-->
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">11:34</span>
+													<a href="" class="is-wordbox-name">方吉</a><span class="is-wordbox-content">
+														<a
+															href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer</a>
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-both">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number">888</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li" style="visibility: visible;">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div href="" class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">11:32</span>
+													<a href="" class="is-wordbox-name">方吉</a><span class="is-wordbox-content"><a
+															href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a></span>
+												</div>
+												<div class="mm_chat_msg_btnbox" style="display:none;"><a href="javascript:void(0);"
+														class="is-btnbox-close">收合</a><a href="javascript:void(0);"
+														class="report_chatMsg">檢舉</a></div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_5.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														@Fuyuki 龍女超正(發言方顯示)</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_6.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox is-tagged">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													<span class="is-wordbox-content">
+														@Fuyuki 龍女超正(接收方顯示)</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">一二三四五六七八九十</a>
+													<span class="is-wordbox-content">
+														權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+												<div class="mm_chat_msg_btnbox">
+													<a href="" class="is-btnbox-close">收合</a>
+													<a href="">檢舉</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">繁星87號</span>
+													<span class="is-wordbox-content">演員都是一時之選<img class="is-wordbox-emoji"
+															src="img/mvmv/feeling/49.png"><img class="is-wordbox-emoji"
+															src="img/mvmv/feeling/67.png"> 每個演員都很棒 劇本跟導演的功力也是一流</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+												<div class="mm_chat_msg_btnbox">
+													<a href="" class="is-btnbox-close">收合</a>
+													<a href="">刪除</a>
+													<a href="">檢舉</a>
+													<a href="">取消禁言</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">E</span>
+													<span class="is-wordbox-content">
+														很好很好~值得一看😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_5.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">E</span>
+													<span class="is-wordbox-content">
+														Gameeeeeeeeeeeeeeeeeeeeee offff
+														Thronesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+														<br />
+														The HTML Certificate documents your knowledge of HTML.
+
+														The CSS Certificate documents your knowledge of advanced CSS.
+
+														The JavaScript Certificate documents your knowledge of JavaScript and HTML
+														DOM.
+
+														The jQuery Certificate documents your knowledge of jQuery.
+
+														The PHP Certificate documents your knowledge of PHP and SQL (MySQL).
+
+														The XML Certificate documents your knowledge of XML, XML DOM and XSLT.
+
+														The Bootstrap Certificate documents your knowledge of the Bootstrap framework.
+													</span>
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+												<div class="mm_chat_msg_btnbox">
+													<a href="" class="is-btnbox-close">收合</a>
+													<a href="">檢舉</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<div style="background-color: #eaeaea;font-size: 12px;padding: 10px;">
+									^ not IE ( 留言文字用 inline tag 包 )(用 "is-wordbox-content tag" 包) ^<br />
+									此鑑別為了的是英文字換行 browser 的 hack<br />
+									不是為了模糊，但模糊範圍因此而不同<br />
+									v IE ( 留言文字用 block tag 包 )(沒 "is-wordbox-name" tag，直接用 ".mm_chat_msg_wordbox" tag ) v
+								</div>
+								<li class="mm_chat_li" style="visibility: visible;">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div href="" class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">11:32</span>
+													<a href="" class="is-wordbox-name">方吉</a><a
+														href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a>
+												</div>
+												<div class="mm_chat_msg_btnbox" style="display:none;"><a href="javascript:void(0);"
+														class="is-btnbox-close">收合</a><a href="javascript:void(0);"
+														class="report_chatMsg">檢舉</a></div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_6.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox is-tagged">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>
+													@Fuyuki 龍女超正(接收方顯示)
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>都沒人點讚
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>我沒讚別人有讚
+													<a href class="mm_chat_msg_wordbox_good is-good-other">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number">23</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<a href="" class="is-wordbox-name">E</a>我跟別人都有讚
+													<a href class="mm_chat_msg_wordbox_good is-good-both">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number">888</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">一二三四五六七八九十</span>
+													權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+												<div class="mm_chat_msg_btnbox">
+													<a href="" class="is-btnbox-close">收合</a>
+													<a href="">檢舉</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">繁星87號</span>
+													演員都是一時之選<img class="is-wordbox-emoji" src="img/mvmv/feeling/49.png"><img
+														class="is-wordbox-emoji" src="img/mvmv/feeling/67.png"> 每個演員都很棒 劇本跟導演的功力也是一流
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+												<div class="mm_chat_msg_btnbox">
+													<a href="" class="is-btnbox-close">收合</a>
+													<a href="">刪除</a>
+													<a href="">檢舉</a>
+													<a href="">取消禁言</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_4.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">E</span>
+													很好很好~值得一看😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mm_chat_li">
+									<a href="" class="mm_chat_cover">
+										<img src="img/mvmv/mdb/forum_sub_5.jpg">
+									</a>
+									<div class="mm_chat_msg">
+										<div class="mm_chat_msg_table">
+											<div class="mm_chat_msg_cell">
+												<div class="mm_chat_msg_wordbox">
+													<span class="is-wordbox-time">20:35</span>
+													<span class="is-wordbox-name">E</span>
+													Gameeeeeeeeeeeeeeeeeeeeee offff
+													Thronesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+													<br />
+													The HTML Certificate documents your knowledge of HTML.
+
+													The CSS Certificate documents your knowledge of advanced CSS.
+
+													The JavaScript Certificate documents your knowledge of JavaScript and HTML DOM.
+
+													The jQuery Certificate documents your knowledge of jQuery.
+
+													The PHP Certificate documents your knowledge of PHP and SQL (MySQL).
+
+													The XML Certificate documents your knowledge of XML, XML DOM and XSLT.
+
+													The Bootstrap Certificate documents your knowledge of the Bootstrap framework.
+													這是最後一則
+													<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+														<!-- is-good-nobody / is-good-other / is-good-both -->
+														<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+														<span class="mm_chat_msg_wordbox_good_icon"></span>
+														<span class="mm_chat_msg_wordbox_good_number"></span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a href="" id="mm_chat_tonewest" class="is-rise"></a><!-- is-rise -->
+						</div>
+						<div id="mm_chat_talk">
+							<div class="mm_chat_talk_position">
+								<img class="mm_chat_talk_cover" src="img/mvmv/mdb/forum_sub_1.jpg">
+								<a class="mm_chat_talk_add" href=""></a>
+								<a class="mm_chat_talk_send" href="">送出</a>
+								<div class="mm_chat_talk_scroll_box is-textarea-one-row is-textarea-focuse">
+									<!-- is-textarea-one-row / is-focuse -->
+									<!-- <span class="mm_chat_talk_tag">@ 六七八九十</span> -->
+									<textarea class="mm_chat_talk_txt" placeholder="" style="">請發表留言 ...</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="mm_chat_masker" style="">
+						<div class="mm_chat_masker_spoiler">
+							<div class="mm_chat_masker_spoiler_cell">
+								<p>
+									此為 AWD 介面<br/><br/>
+									<span>請以手機閱覽</span><br/><br/>
+									以觀看不同互動效果
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- 參與者介面 #mm_chat_client
+						參與者介面白屏 #mm_chat_client_masker
+					-->
+					<div id="mm_chat_client">
+						<div class="mm_chat_client_arrow"></div>
+						<ul class="mm_chat_client_box">
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									<p>Sophie Yeh</p>
+								</a>
+							</li>
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									<p>Abcdefghihklmnopqrst</p>
+								</a>
+							</li>
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									<p>一二三四五六七八九十</p>
+								</a>
+							</li>
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									<p>Sophie Yeh</p>
+								</a>
+							</li>
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									<p>E</p>
+								</a>
+							</li>
+							<li>
+								<a href="" class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									<p>a tag</p>
+								</a>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									<p>Sophie Yeh</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									<p>E</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									<p>一二三四五六七八九十</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									<p>Sophie Yeh</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									<p>E</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									<p>一二三四五六七八九十</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_1.jpg">
+									<p>Sophie Yeh</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_2.jpg">
+									<p>E</p>
+								</div>
+							</li>
+							<li>
+								<div class="mm_chat_client_list">
+									<img src="img/mvmv/mdb/forum_sub_3.jpg">
+									<p>一二三四五六七八九十</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="mmNewsHot">
+					<h2>相關新聞</h2>
+					<div>
+						<a href="#" class="mmNewsBox">
+							<div class="mmSort">
+								<!-- TV -->電影</div>
+							<div class="mmHot">HOT</div>
+							<img src="img/mvmv/source/newsbox_1.jpg" />
+							<div class="mmNewsBoxCont">
+								<h2>
+									【情報】哈比人到小螢幕？Amazon計畫推《魔戒》全新史詩奇幻影集！
+									<span>688 分享</span>
+								</h2>
+								<p>
+									Amazon可能找到屬於自己的《冰與火之歌：權力遊戲》（Game of Thrones）了！
+									美國媒體《娛樂週刊》證實，串流平台Amazon正在與華納兄弟 ...
+								</p>
+							</div>
+						</a> <a href="#" class="mmNewsBox">
+							<div class="mmSort TV">
+								<!-- TV -->美劇</div>
+							<!--div class="mmHot">HOT</div-->
+							<img src="img/mvmv/source/newsbox_2.jpg" />
+							<div class="mmNewsBoxCont">
+								<h2>
+									【情報】《冰與火之歌：權力遊戲》歡樂合體「馬王」與「丹妮莉絲坦格利安」再度相遇！
+									<span>79 分享</span>
+								</h2>
+								<p>
+									等待《冰與火之歌：權力遊戲》（Game of Thrones）第八季還有好長的時間，不過好消息是有兩位重要角色在現實生活中合體啦 ...
+								</p>
+							</div>
+						</a> <a href="#" class="mmNewsBox">
+							<div class="mmSort">
+								<!-- TV -->電影</div>
+							<div class="mmHot">HOT</div>
+							<img src="img/mvmv/source/newsbox_1.jpg" />
+							<div class="mmNewsBoxCont">
+								<h2>
+									【情報】哈比人到小螢幕？Amazon計畫推《魔戒》全新史詩奇幻影集！
+									<span>688 分享</span>
+								</h2>
+								<p>
+									Amazon可能找到屬於自己的《冰與火之歌：權力遊戲》（Game of Thrones）了！
+									美國媒體《娛樂週刊》證實，串流平台Amazon正在與華納兄弟 ...
+								</p>
+							</div>
+						</a> <a href="#" class="mmNewsBox">
+							<div class="mmSort TV">
+								<!-- TV -->美劇</div>
+							<!--div class="mmHot">HOT</div-->
+							<img src="img/mvmv/source/newsbox_2.jpg" />
+							<div class="mmNewsBoxCont">
+								<h2>
+									【情報】《冰與火之歌：權力遊戲》歡樂合體「馬王」與「丹妮莉絲坦格利安」再度相遇！
+									<span>79 分享</span>
+								</h2>
+								<p>
+									等待《冰與火之歌：權力遊戲》（Game of Thrones）第八季還有好長的時間，不過好消息是有兩位重要角色在現實生活中合體啦 ...
+								</p>
+							</div>
+						</a> <a href="#" class="mmNewsBox">
+							<div class="mmSort">
+								<!-- TV -->電影</div>
+							<div class="mmHot">HOT</div>
+							<img src="img/mvmv/source/newsbox_1.jpg" />
+							<div class="mmNewsBoxCont">
+								<h2>
+									【情報】哈比人到小螢幕？Amazon計畫推《魔戒》全新史詩奇幻影集！
+									<span>688 分享</span>
+								</h2>
+								<p>
+									Amazon可能找到屬於自己的《冰與火之歌：權力遊戲》（Game of Thrones）了！
+									美國媒體《娛樂週刊》證實，串流平台Amazon正在與華納兄弟 ...
+								</p>
+							</div>
+						</a> <a href="" class="more">...更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mmfooter">
+		<div class="fwrapper">
+			<ul class="fbody">
+				<li class="fbody-list is-open">
+					<div href="" class="fbody-switch">電視劇</div>
+					<ul class="fsubbody">
+						<li class="fsubbody-list"><a href="">本周開播</a></li>
+						<li class="fsubbody-list"><a href="">電視劇推薦</a></li>
+						<li class="fsubbody-list"><a href="">電視劇首頁</a></li>
+						<li class="fsubbody-list"><a href="">最期待</a></li>
+						<li class="fsubbody-list"><a href="">評分最高</a></li>
+						<li class="fsubbody-list"><a href="">即將開播</a></li>
+						<li class="fsubbody-list"><a href="">陸劇</a></li>
+						<li class="fsubbody-list"><a href="">美劇</a></li>
+						<li class="fsubbody-list"><a href="">韓劇</a></li>
+						<li class="fsubbody-list"><a href="">日劇</a></li>
+						<li class="fsubbody-list"><a href="">台劇</a></li>
+					</ul>
+				</li>
+				<li class="fbody-list">
+					<div href="" class="fbody-switch">電影</div>
+					<ul class="fsubbody">
+						<li class="fsubbody-list"><a href="">電影首頁</a></li>
+						<li class="fsubbody-list"><a href="">電影推薦</a></li>
+						<li class="fsubbody-list"><a href="">本周上映</a></li>
+						<li class="fsubbody-list"><a href="">即將上映</a></li>
+						<li class="fsubbody-list"><a href="">評分最高</a></li>
+						<li class="fsubbody-list"><a href="">最期待</a></li>
+						<li class="fsubbody-list"><a href="">韓國電影</a></li>
+						<li class="fsubbody-list"><a href="">台灣電影</a></li>
+						<li class="fsubbody-list"><a href="">日本電影</a></li>
+						<li class="fsubbody-list"><a href=""></a></li>
+					</ul>
+				</li>
+				<li class="fbody-list">
+					<div href="" class="fbody-switch">演員</div>
+					<ul class="fsubbody">
+						<li class="fsubbody-list"><a href="">女演員</a></li>
+						<li class="fsubbody-list"><a href="">男演員</a></li>
+						<li class="fsubbody-list"><a href="">演員首頁</a></li>
+						<li class="fsubbody-list"><a href="">編劇</a></li>
+						<li class="fsubbody-list"><a href="">導演</a></li>
+						<li class="fsubbody-list"><a href="">最多人喜歡</a></li>
+						<li class="fsubbody-list"><a href="">全方位演員</a></li>
+						<li class="fsubbody-list"><a href="">配樂</a></li>
+						<li class="fsubbody-list"><a href=""></a></li>
+						<li class="fsubbody-list"><a href=""></a></li>
+					</ul>
+				</li>
+				<li class="fbody-list">
+					<div href="" class="fbody-switch">討論圈</div>
+					<ul class="fsubbody">
+						<li class="fsubbody-list"><a href="">全部討論板</a></li>
+						<li class="fsubbody-list"><a href="">電影綜合討論</a></li>
+						<li class="fsubbody-list"><a href="">圈圈好康同樂會</a></li>
+						<li class="fsubbody-list"><a href="">大家來閒聊板</a></li>
+						<li class="fsubbody-list"><a href="">漫威、DC系列</a></li>
+						<li class="fsubbody-list"><a href="">美劇</a></li>
+						<li class="fsubbody-list"><a href="">電影版聲之形</a></li>
+						<li class="fsubbody-list"><a href="">異星智慧</a></li>
+						<li class="fsubbody-list"><a href="">我和我的冠軍女兒我和我的冠軍女兒</a></li>
+						<li class="fsubbody-list"><a href="">美女與野獸</a></li>
+						<li class="fsubbody-list"><a href="">陰屍路 第七季</a></li>
+						<li class="fsubbody-list"><a href="">Voice 聲命線</a></li>
+					</ul>
+				</li>
+				<li class="fbody-list is-shop">
+					<div href="" class="fbody-switch">爆點福利社</div>
+				</li>
+				<li class="fbody-list is-no-border is-1024row1">
+					<div href="" class="fbody-switch">其它資訊</div>
+					<ul class="fsubbody">
+						<li class="fsubbody-list"><a href="">影劇圈圈站規</a></li>
+						<li class="fsubbody-list"><a href="">隱私權聲明</a></li>
+						<li class="fsubbody-list"><a href="">廣告合作</a></li>
+						<li class="fsubbody-list"><a href="">關於我們</a></li>
+						<li class="fsubbody-list"><a href="">客服中心</a></li>
+						<li class="fsubbody-list is-shop"><a href="">爆點福利社</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="funderbox">
+			<div class="fwrapper">
+				<div class="ffb">
+					按讚加入<a href="" class="ffb_door">粉絲團</a>接收更多有趣消息
+					<div class="ffb_api"></div>
+				</div>
+				<div class="fcopyright">
+					<div class="fvision"></div>
+					<div class="fword">
+						<p class="is-first">旺普娛樂股份有限公司 © Oneup Entertainment</p>
+						<p>Corporation All Rights Reserved.</p>
+						<p class="is-last">本網站已依台灣網站內容分級規定處理</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--inc/mm_header.inc > #mm_layout -->
+	<!--/div-->
+	<!--v 聊天室手機版 v-->
+	<!--
+title
+	ui + masker
+client
+-->
+	<div class="mdb_chat_box_mobi_title">
+		<div class="mdb_chat_box_mobi_title_deco1">
+			<div class="mdb_chat_box_mobi_title_deco2">
+				<a href="" class="mdb_chat_box_mobi_title_name">
+					<span class="mdb_chat_box_mobi_title_arrow">
+						<img src="img/mvmv/chat/normal.png" id="chat_mobi_arrow">
+					</span>
+					<span class="mdb_chat_box_mobi_title_name_fname"> 請點選以展開/收合聊天室</span>
+				</a>
+				<a href="" class="mdb_chat_box_mobi_title_client">
+					<span class="mdb_chat_box_mobi_title_client_icon"></span>
+					(<span class="mdb_chat_box_mobi_title_client_num">303</span>)
+				</a>
+			</div>
+		</div>
+		<div class="ani_mask"></div>
+	</div>
+	<div id="mdb_chat_box_mobi">
+		<div class="mdb_chat_box_mobi_box">
+			<!--聊天文字列 #mm_chat
+    文字輸入框 #mm_chat_talk
+    回到最上方 #mm_chat_tonewest
+    防雷黑屏   #mm_chat_masker
+ -->
+			<div id="mm_chat_ui">
+				<div class="mm_chat_client_masker"></div>
+				<div id="mm_chat_outbox">
+					<p class="mm_chat_release">9/23 起 每週日 22 : 00 於 客家電視台 播出本劇</p>
+					<ul id="mm_chat" class="">
+						<!-- is-filter -->
+						<!-- is-ie-filter -->
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												這是第一則</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_2.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												都沒人點讚</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_3.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												我沒讚別人有讚</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-other">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number">23</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												我跟別人都有讚</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-both">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number">888</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<!-- mv -->
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">mv</a>
+											<span class="is-wordbox-content">
+												<br />
+												<a href="mv" class="is-wordbox-pic">
+													<img src="img/mvmv/mdb/mdb_mv08.jpg">
+												</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<!-- landscape -->
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">landscape</a>
+											<span class="is-wordbox-content">
+												<br />
+												<a href="mv" class="is-wordbox-pic is-wordbox-mv">
+													<img src="img/mvmv/mdb/mbb01.jpg">
+												</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<!-- box -->
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">box</a>
+											<span class="is-wordbox-content">
+												<br />
+												<a href="mv" class="is-wordbox-pic">
+													<img src="img/mvmv/mdb/mdb_box.png">
+												</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<!-- portrait -->
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">portrait</a>
+											<span class="is-wordbox-content">
+												<br />
+												<a href="mv" class="is-wordbox-pic is-wordbox-portrait">
+													<img src="img/mvmv/mdb/mdb76.jpg">
+												</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<!-- portrait -->
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">portrait</a>
+											<span class="is-wordbox-content">
+												<br />
+												<a href="mv" class="is-wordbox-pic is-wordbox-portrait  is-wordbox-mv">
+													<img src="img/mvmv/mdb/mdb77.jpg">
+												</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- ^^ try ^^-->
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">11:34</span>
+											<a href="" class="is-wordbox-name">方吉</a><span class="is-wordbox-content">
+												<a
+													href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer</a>
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-both">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number">888</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li" style="visibility: visible;">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div href="" class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">11:32</span>
+											<a href="" class="is-wordbox-name">方吉</a><span class="is-wordbox-content"><a
+													href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a></span>
+										</div>
+										<div class="mm_chat_msg_btnbox" style="display:none;"><a href="javascript:void(0);"
+												class="is-btnbox-close">收合</a><a href="javascript:void(0);"
+												class="report_chatMsg">檢舉</a></div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_5.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												@Fuyuki 龍女超正(發言方顯示)</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_6.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox is-tagged">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											<span class="is-wordbox-content">
+												@Fuyuki 龍女超正(接收方顯示)</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">一二三四五六七八九十</a>
+											<span class="is-wordbox-content">
+												權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+										<div class="mm_chat_msg_btnbox">
+											<a href="" class="is-btnbox-close">收合</a>
+											<a href="">檢舉</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_3.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">繁星87號</span>
+											<span class="is-wordbox-content">演員都是一時之選<img class="is-wordbox-emoji"
+													src="img/mvmv/feeling/49.png"><img class="is-wordbox-emoji" src="img/mvmv/feeling/67.png">
+												每個演員都很棒 劇本跟導演的功力也是一流</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+										<div class="mm_chat_msg_btnbox">
+											<a href="" class="is-btnbox-close">收合</a>
+											<a href="">刪除</a>
+											<a href="">檢舉</a>
+											<a href="">取消禁言</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">E</span>
+											<span class="is-wordbox-content">
+												很好很好~值得一看😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_5.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">E</span>
+											<span class="is-wordbox-content">
+												Gameeeeeeeeeeeeeeeeeeeeee offff
+												Thronesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+												<br />
+												The HTML Certificate documents your knowledge of HTML.
+
+												The CSS Certificate documents your knowledge of advanced CSS.
+
+												The JavaScript Certificate documents your knowledge of JavaScript and HTML DOM.
+
+												The jQuery Certificate documents your knowledge of jQuery.
+
+												The PHP Certificate documents your knowledge of PHP and SQL (MySQL).
+
+												The XML Certificate documents your knowledge of XML, XML DOM and XSLT.
+
+												The Bootstrap Certificate documents your knowledge of the Bootstrap framework.
+											</span>
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+										<div class="mm_chat_msg_btnbox">
+											<a href="" class="is-btnbox-close">收合</a>
+											<a href="">檢舉</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<div style="background-color: #eaeaea;font-size: 12px;padding: 10px;">
+							^ not IE ( 留言文字用 inline tag 包 )(用 "is-wordbox-content tag" 包) ^<br />
+							此鑑別為了的是英文字換行 browser 的 hack<br />
+							不是為了模糊，但模糊範圍因此而不同<br />
+							v IE ( 留言文字用 block tag 包 )(沒 "is-wordbox-name" tag，直接用 ".mm_chat_msg_wordbox" tag ) v
+						</div>
+						<li class="mm_chat_li" style="visibility: visible;">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div href="" class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">11:32</span>
+											<a href="" class="is-wordbox-name">方吉</a><a
+												href="">https://blog.dcplus.com.tw/marketing-knowledge/optimizer/121732?utm_content=buffera8693&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a>
+										</div>
+										<div class="mm_chat_msg_btnbox" style="display:none;"><a href="javascript:void(0);"
+												class="is-btnbox-close">收合</a><a href="javascript:void(0);"
+												class="report_chatMsg">檢舉</a></div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_6.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox is-tagged">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>
+											@Fuyuki 龍女超正(接收方顯示)
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_1.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>都沒人點讚
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_2.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>我沒讚別人有讚
+											<a href class="mm_chat_msg_wordbox_good is-good-other">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number">23</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_3.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<a href="" class="is-wordbox-name">E</a>我跟別人都有讚
+											<a href class="mm_chat_msg_wordbox_good is-good-both">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number">888</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">一二三四五六七八九十</span>
+											權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲冰與火之歌權力的遊戲
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+										<div class="mm_chat_msg_btnbox">
+											<a href="" class="is-btnbox-close">收合</a>
+											<a href="">檢舉</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_3.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">繁星87號</span>
+											演員都是一時之選<img class="is-wordbox-emoji" src="img/mvmv/feeling/49.png"><img
+												class="is-wordbox-emoji" src="img/mvmv/feeling/67.png"> 每個演員都很棒 劇本跟導演的功力也是一流
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+										<div class="mm_chat_msg_btnbox">
+											<a href="" class="is-btnbox-close">收合</a>
+											<a href="">刪除</a>
+											<a href="">檢舉</a>
+											<a href="">取消禁言</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_4.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">E</span>
+											很好很好~值得一看😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭😐😦👺😑🎉🎊👌👏👍😂👍😮😱😭
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mm_chat_li">
+							<a href="" class="mm_chat_cover">
+								<img src="img/mvmv/mdb/forum_sub_5.jpg">
+							</a>
+							<div class="mm_chat_msg">
+								<div class="mm_chat_msg_table">
+									<div class="mm_chat_msg_cell">
+										<div class="mm_chat_msg_wordbox">
+											<span class="is-wordbox-time">20:35</span>
+											<span class="is-wordbox-name">E</span>
+											Gameeeeeeeeeeeeeeeeeeeeee offff
+											Thronesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+											<br />
+											The HTML Certificate documents your knowledge of HTML.
+
+											The CSS Certificate documents your knowledge of advanced CSS.
+
+											The JavaScript Certificate documents your knowledge of JavaScript and HTML DOM.
+
+											The jQuery Certificate documents your knowledge of jQuery.
+
+											The PHP Certificate documents your knowledge of PHP and SQL (MySQL).
+
+											The XML Certificate documents your knowledge of XML, XML DOM and XSLT.
+
+											The Bootstrap Certificate documents your knowledge of the Bootstrap framework.
+											這是最後一則
+											<a href class="mm_chat_msg_wordbox_good is-good-nobody">
+												<!-- is-good-nobody / is-good-other / is-good-both -->
+												<spna class="mm_chat_msg_wordbox_good_point">‧</spna>
+												<span class="mm_chat_msg_wordbox_good_icon"></span>
+												<span class="mm_chat_msg_wordbox_good_number"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="" id="mm_chat_tonewest" class="is-rise"></a><!-- is-rise -->
+				</div>
+				<div id="mm_chat_talk">
+					<div class="mm_chat_talk_position">
+						<img class="mm_chat_talk_cover" src="img/mvmv/mdb/forum_sub_1.jpg">
+						<a class="mm_chat_talk_add" href=""></a>
+						<a class="mm_chat_talk_send" href="">送出</a>
+						<div class="mm_chat_talk_scroll_box is-textarea-one-row is-textarea-focuse">
+							<!-- is-textarea-one-row / is-focuse -->
+							<!-- <span class="mm_chat_talk_tag">@ 六七八九十</span> -->
+							<textarea class="mm_chat_talk_txt" placeholder="" style="">請發表留言 ...</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="mm_chat_masker" style="">
+				<div class="mm_chat_masker_spoiler">
+					<div class="mm_chat_masker_spoiler_cell">
+						<p>
+							再次點選 title bar 
+							<br />
+							可收合聊天室
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--    參與者介面 #mm_chat_client
+    參與者介面白屏 #mm_chat_client_masker
+-->
+	<div id="mm_chat_client">
+		<div class="mm_chat_client_arrow"></div>
+		<ul class="mm_chat_client_box">
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_1.jpg">
+					<p>Sophie Yeh</p>
+				</a>
+			</li>
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_2.jpg">
+					<p>Abcdefghihklmnopqrst</p>
+				</a>
+			</li>
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_3.jpg">
+					<p>一二三四五六七八九十</p>
+				</a>
+			</li>
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_1.jpg">
+					<p>Sophie Yeh</p>
+				</a>
+			</li>
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_2.jpg">
+					<p>E</p>
+				</a>
+			</li>
+			<li>
+				<a href="" class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_3.jpg">
+					<p>a tag</p>
+				</a>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_1.jpg">
+					<p>Sophie Yeh</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_2.jpg">
+					<p>E</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_3.jpg">
+					<p>一二三四五六七八九十</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_1.jpg">
+					<p>Sophie Yeh</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_2.jpg">
+					<p>E</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_3.jpg">
+					<p>一二三四五六七八九十</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_1.jpg">
+					<p>Sophie Yeh</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_2.jpg">
+					<p>E</p>
+				</div>
+			</li>
+			<li>
+				<div class="mm_chat_client_list">
+					<img src="img/mvmv/mdb/forum_sub_3.jpg">
+					<p>一二三四五六七八九十</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery.justifiedGallery.js"></script>
+</body>
+
+</html>
