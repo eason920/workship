@@ -1,0 +1,23 @@
+@mixin img_path($path,$ratio){
+	background:{
+		image: image-url($path,false,true);
+		size: image-width($path) / $ratio image-height($path) / $ratio;
+	}
+}
+@mixin img_path_only($path){
+	background:{
+		image: image-url($path,false,true);
+	}
+}
+%row1{
+	overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+%row2{
+	display: -webkit-box;
+
+	-webkit-line-clamp: 2;
+
+	-webkit-box-orient: vertical;
+
+	overflow: hidden;
+}
