@@ -1,0 +1,16 @@
+body, div, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+input, textarea, p, span, b, i, a,
+table, th, td{
+	margin:0;padding:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+ol,ul{list-style:none;}
+body{
+	font-family:arial,"微軟正黑體";
+}
