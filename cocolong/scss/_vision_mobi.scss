@@ -1,0 +1,81 @@
+@media screen and (max-width: 767px){
+	.lsview_pc{
+		display: none;
+	}
+	//
+	//
+	.lsview_m{
+		font-size: 0;
+		position: relative;
+		&:before{
+			content:"";display: block;
+			width: 100%;height: 80px;
+			background: linear-gradient(to bottom,#fff,rgba(255,255,255,0));
+			position: absolute;
+			top: 0;z-index: 1;
+		}
+	}
+	.lsview_m_area{
+		display: block;
+		width: 100%;
+	}
+	////////
+	%viewbox_m{
+		position: absolute;
+		top: 0;width: 100%;
+		background:{
+			size: cover;
+			repeat: no-repeat;
+		}
+	}
+	.lsview_m_bg{
+		@extend %viewbox_m;
+		@include img_path_only("m_view_bg2.jpg");
+		background:{
+			position: 0 3px;
+		}
+	}
+	.lsview_m_title{
+		width: image-width("m_view_title.png")/2;
+		height: image-height("m_view_title.png")/2;
+		position: absolute;
+		margin-left: -154px;
+		top: 0;left: 50%;
+		z-index: 2;
+		opacity: 0;
+	}
+	////////
+	.lsview_m_sub{
+		font:{
+			size: 17px;
+			weight: bold;
+		}
+		text-shadow: 0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff,0 0 4px #fff;
+		color: #f55;
+		position: absolute;
+		right: 20px;
+		top: 95px;
+		z-index: 3;
+		
+		opacity: 0;
+	}
+	.lsview_m_sub2{
+		padding-left: 15px;
+	}
+	.lsview_m_sub1_ani,
+	.lsview_m_sub2_ani{
+		display: inline-block;
+		text-indent: -4px;
+	}
+	////
+	.lsview_m_family{
+		width: 100%;
+		position: absolute;
+		bottom: -6px;
+	}
+	////////====================
+	%form_m_marginbottom{
+		margin-bottom: 10px;
+	}
+	
+}
