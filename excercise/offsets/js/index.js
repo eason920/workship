@@ -22,9 +22,11 @@
 		$selected.css('z-index', _zindex ++).addClass('draggable');
 
 		$doc.on('mousemove.eason', function(event){
+			x = event.pageX + _x,
+			y = event.pageY + _y
 			$selected.css({
-				left: event.pageX + _x, 
-				top: event.pageY + _y
+				left: x, 
+				top: y
 			});
 		}).on('mouseup.eason', function(){
 			if($selected != null){

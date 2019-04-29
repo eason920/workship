@@ -27,7 +27,7 @@ $(function () {
 
 		$selected.css('z-index', _zindex ++).addClass('draggable');
 
-		$doc.on('mousemove.eason', function (event) {
+		$doc.on('mousemove.eason', function (event) { // is doc 超重要 / 不是 selector
 			$selected.css({
 				left: event.pageX + _x,
 				top: event.pageY + _y
