@@ -23,38 +23,40 @@
 	});
 
 	//offset
-	var $doc = $(document), 
-		$selected = null, 
-		zIndex = 10;
+	$('.dragDiv2 h3').mousedown(function(e){
+		e.preventDefault();
 
-	$('.dragDiv2 h3').mousedown(function(event){
-		event.preventDefault();
+		var $doc = $(document),
+			$selected = $(this).parents('.dragDiv'),
+			$win = $(window),
+			maxL = $win.width() - $selected.width(),
+			maxT = $win.height() - $selected.height(),
+			//
+			offset = $selected.offset(), 
+			x = offset.left - e.pageX, 
+			y = offset.top - e.pageY,
+			tx, ty,
+			padding = 5;
 
-		var $this = $(this);
-
-		if($this.hasClass('dragDiv')){
-			$selected = $this;
-		}else{
-			$selected = $this.parents('.dragDiv');
-		}
-
-		var _offset = $selected.offset(), 
-			x = _offset.left - event.pageX, 
-			y = _offset.top - event.pageY;
-
-		$selected.css('z-index', zIndex++).addClass('draggable');
-
-		$doc.on('mousemove.abgne', function(event){
-			$selected.css({
-				left: event.pageX + x, 
-				top: event.pageY + y
-			});
-		}).on('mouseup.abgne', function(){
-			if($selected != null){
-				$doc.off('.abgne');
-				$selected.removeClass('draggable');
-				$selected = null;
+		$doc.on('mousemove.eason', function(e){
+			tx = e.pageX + x;
+			ty = e.pageY + y;
+			if(tx >= maxL){
+				tx = maxL - padding;
+			}else if(tx <= padding){
+				tx = padding;
 			}
+			if(ty >= maxT){
+				ty = maxT - padding;
+			}else if(ty <= padding){
+				ty = padding;
+			}
+			$selected.css({
+				left: tx, 
+				top: ty
+			});
+		}).on('mouseup.eason', function(){
+			$doc.off('.eason');
 		});
 	});
 });
