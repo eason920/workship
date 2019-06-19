@@ -1,52 +1,34 @@
 $(function(){
-	var json;
-	$.getJSON('data/filter.json',function(data){
+	let json = [];
+	$.getJSON('data/filter.json', function(data){
 		json = data;
 		show(json);
-	})
+	});
 
-	function render(html, data) {
-		var template;
-		if (data instanceof Array) {
-			template = html;
-			html = ''
-		}
-
-		function replace(html, key, value) {
-			key = '{{' + key + '}}';
-			while (html.indexOf(key) > -1) {
-				html = html.replace(key, value);
-			}
-			return html;
-		}
-
-		for (a in data) {
-			if (template) {
-				html += template;
-				for (b in data[a]) {
-					html = replace(html, b, data[a][b]);
-				}
-			} else {
-				html = replace(html, a, data[a]);
+	const render = function(html, data){
+		let temp = '';
+		for(let i in data){
+			temp += html;
+			for(let key in data[i]){
+				const orgStr = `{{${key}}}`;
+				const newStr = data[i][key];
+				temp = temp.replace(orgStr, newStr);
 			}
 		}
+		return temp;
+	};
 
-		return html;
-	}
-
-	function show(json){
-		$.get('temp.html',function(html){
-			$('#list').html(render(html,json));
+	const show = function(data){
+		$.get('temp.html', function(html){
+			$('#list').html(render(html, data));
 		})
 	}
 
-	$('#search').keyup(function(){
-		var val = $(this).val().toLowerCase();
+	$('#search').on('keyup', function(){
+	let val = $(this).val().toLowerCase();
 		show(
-			json.filter(function(a){
-				console.log(a.name);
-				var source = a.name.toLowerCase();
-				return source.indexOf(val) > -1; 
+			json.filter(function(item){
+				return item.name.toLowerCase().indexOf(val) >= 0;
 			})
 		);
 	});
