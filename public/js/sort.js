@@ -30,21 +30,42 @@
         show(json);
     });
     function sort(key, direction) {
-        json.sort(function(a, b) {
-            if (direction == "up") {
-                if (a[key] > b[key]) {
-                    return 1;
+        if( key !== 'tw' ){
+            json.sort(function (a, b) {
+                if (direction == "down") {
+                    if (a[key] > b[key]) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
                 } else {
-                    return -1;
+                    if (a[key] < b[key]) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
                 }
-            } else {
-                if (a[key] < b[key]) {
-                    return 1;
+            });
+        }else{
+            json.sort(function (a, b) {
+                let aa = customSort(a[key]);
+                let bb = customSort(b[key]);
+                if (direction == "down") {
+                    if (aa > bb) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
                 } else {
-                    return -1;
+                    if (aa < bb) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
                 }
-            }
-        });
+            });
+        }
+        
     }
     function customSort(input) {
         if (typeof input == "string") {
