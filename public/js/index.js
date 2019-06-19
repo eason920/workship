@@ -1,11 +1,17 @@
 ﻿$(function () {
-	$(".menu>a").mouseenter(function (e) {
-		$(".menu>a.selected").removeClass();
-		$(".eason-box").load($(this).addClass("selected").attr("href"));
-		location.hash = $(this).attr("href");
-		e.preventDefault();
-	}).filter("[href='" + (location.hash.substr(1) || $(".menu>a").attr("href")) + "']").mouseenter();
-	$(window).on("hashchange", function () {
-		$(".menu>a").filter("[href='" + (location.hash.substr(1) || $(".menu>a").attr("href")) + "']").mouseenter();
-	});
+	const $tag = $('.menu > a');
+	$tag.on('mouseenter', function () {
+		$('.menu > a.selected').removeClass();
+		$(this).addClass('selected');
+		$('.eason-box').load(
+			$(this).attr('href')
+		)
+		location.hash = $(this).attr('href');
+	}).filter(`[href=\'${location.hash.substr(1) || $tag.attr('href')}\']`).mouseenter();
+
+	$tag.click(function (e) { e.preventDefault(); })
+
+	$(window).on('hashchange', function () {
+		$tag.filter(`[href=\'${location.hash.substr(1) || $tag.attr('href')}\']`).mouseenter();
+	})
 });
