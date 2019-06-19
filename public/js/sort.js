@@ -19,10 +19,10 @@
     $(".bordered th").click(function() {
         var $this = $(this);
         $this.siblings().removeClass();
-        if ($this.hasClass("up")) {
-            $this.attr("class", "down");
-        } else {
+        if ($this.hasClass("down")) {
             $this.attr("class", "up");
+        } else {
+            $this.attr("class", "down");
         }
         var key = $this.data("key");
         var direction = $this.attr("class");
