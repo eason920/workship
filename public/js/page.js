@@ -2,7 +2,6 @@
 	var json;
 	var pagerCount = 5; //每頁顯示幾筆
 	var currentIndex = 1; //目前在第幾頁
-	var $link = $('content a');
 	function show(data) {
 		var $tbody = $("<tbody>");
 		for (var i = 0; i < data.length; i++) {
@@ -15,11 +14,9 @@
 			);
 		}
 		$("#content").html($tbody.html());
-		setTimeout(function () {
-			$('#content a').click(function () {
-				return false;
-			});
-		}), 500;
+		$('#content a').click(function () {
+			return false;
+		});
 	}
 	$.getJSON("data/page.json", function (data) {
 		json = data;
