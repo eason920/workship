@@ -53,7 +53,6 @@ const sort = function (data, direct, key) {
 					}
 				}
 			}
-			return data;
 		})
 	);
 };

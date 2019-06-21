@@ -7,11 +7,11 @@
 			$(this).attr('href')
 		)
 		location.hash = $(this).attr('href');
-	}).filter(`[href=\'${location.hash.substr(1) || $tag.attr('href')}\']`).mouseenter();
+	}).filter(`[href="${location.hash.substr(1) || $tag.attr('href')}"]`).mouseenter();
 
 	$tag.click(function (e) { e.preventDefault(); })
 
 	$(window).on('hashchange', function () {
-		$tag.filter(`[href=\'${location.hash.substr(1) || $tag.attr('href')}\']`).mouseenter();
+		$tag.filter(`[href="${location.hash.substr(1) || $tag.attr('href')}"]`).mouseenter();
 	})
 });

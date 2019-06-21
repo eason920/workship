@@ -1,35 +1,25 @@
-$(function(){
-	_view_m_height=$(".lsview_m_area").height();
-	$(".lsview_m_bg").css({height:_view_m_height});
+$(function () {
+	const heightM = $(".lsview-m").height();
+	const viewBox = $("#lsview");
 
-	$(".lsfooter_mbtn").click(function(){
-		$('html,body').animate({ scrollTop: 0 }, 'slow');
-        return false; 
+	// MOBILE UI
+	$(".lsview-mbg").css({ height: heightM });
+
+	// ANIMATE CONTROL
+	viewBox.addClass("is-ani");
+	$(window).scroll(function () {
+		const nua = navigator.userAgent;
+		const wst = $(window).scrollTop();
+		if (nua.match(/(iPhone|iPod|Android)/)) {
+			wst > heightM ? viewBox.removeClass("is-ani") : viewBox.addClass("is-ani");
+		} else {
+			wst > $('.lsview-pc').height() ? viewBox.removeClass("is-ani") : viewBox.addClass("is-ani");
+		}
 	});
-	$(".lsfooter_pcbtn").click(function(){
-		$('html,body').animate({ scrollTop: 0 }, 'slow');
-        return false; 
-	});
 
-	////
-
-	var nua = navigator.userAgent;
-	var LV = $("#lsview");
-	LV.addClass("is-ani");
-	$(window).scroll(function(){
-		var wst = $(window).scrollTop();
-		if(nua.match(/(iPhone|iPod|Android)/)){
-			if(wst > _view_m_height){
-				LV.removeAttr("class");
-			}else{
-				LV.addClass("is-ani");
-			};
-		}else{
-			if(wst>638){
-				LV.removeAttr("class");
-			}else{
-				LV.addClass("is-ani");
-			};
-		};
+	// BACK TO TOP
+	$(".lsfooter-mbtn, .lsfooter-pcbtn").click(function (e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 });
