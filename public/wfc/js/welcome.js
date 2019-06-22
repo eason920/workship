@@ -1,61 +1,58 @@
-const perWidth = 265,
-	perGutter = 8,
-	$target = $('.vbox-outer');
+const $item = $('.vbox-item'),
+	$outer = $('.vbox-outer'),
+	perWidth = 265,
+	perGutter = 8;
 
-// VBOX-LIST WIDTH
-function vboxListWidth(target) {
-	const $item = target.find(".vbox-item"),
-		count = $item.length;
-	$item.css({ width: perWidth, marginRight: perGutter });
-	const width = $item.outerWidth(true) * count - perGutter,
-		height = $item.height();
-	target.find('.vbox').css({ height }).find('.vbox-list').css({ width });
-};
+function vboxWidth(target) {
+	const width = (perWidth + perGutter) * target.find('.vbox-item').length - perGutter;
+	target.find('.vbox-list').css({ width });
+}
 
-// AWD / ADD IS-PC
-function vboxPreNex(target) {
-	$target.addClass('is-pc');
-
+function vboxMove(target) {
 	const $pre = target.find('.vbox-pre'),
 		$nex = target.find('.vbox-nex'),
 		$list = target.find('.vbox-list'),
-		// 
-		move = (perWidth + perGutter) * 2,
-		maxMove = ($list.width() - $('.vbox').width()) * -1;
+		move = (perWidth + perGutter) * 2;
 	let left = 0;
 
-	// NEX
-	$nex.click(function (e) {
-		$pre.removeClass('is-end').css({ display: 'block' });
+	// NXT
+	$nex.on('click', function(e){
+		e.preventDefault();
+		const maxLeft = ($list.width() - target.find('.vbox').width()) * -1;
+		$pre.removeClass('is-end').css({display: 'block'});
 		left -= move;
-		if (left <= maxMove) {
-			left = maxMove;
+		if(left <= maxLeft){
+			left = maxLeft;
 			$(this).addClass('is-end');
 		}
 		$list.stop(true, false).animate({ left }, 100);
-		e.preventDefault();
 	});
 
 	// PRE
-	$pre.click(function (e) {
+	$pre.on('click', function(e){
+		e.preventDefault();
 		$nex.removeClass('is-end');
 		left += move;
-		if (left >= 0) {
+		if(left >= 0){
 			left = 0;
 			$(this).addClass('is-end');
 		}
 		$list.stop(true, false).animate({ left }, 100);
-		e.preventDefault();
-	})
-};
+	});
+}
 
 $(function () {
-	for (i = 0; i < $target.length; i++) {
-		vboxListWidth($target.eq(i));
+	$item.css({ width: perWidth, marginRight: perGutter });
+	$('.vbox').css({ height: $item.height() });
+
+	for(i = 0; i < $outer.length; i++){
+		vboxWidth($outer.eq(i));
 	};
-	if (!/iphone|ipad|android/i.test(navigator.userAgent)) {
-		for (i = 0; i < $target.length; i++) {
-			vboxPreNex($target.eq(i));
+	
+	if(!/iphone|android|ipad/i.test(navigator.userAgent)){
+		$outer.addClass('is-pc');
+		for(i = 0; i < $outer.length; i++){
+			vboxMove($outer.eq(i));
 		};
 	};
-})
+});
