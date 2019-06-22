@@ -1,62 +1,34 @@
-﻿$(function(){
-	// UI
-	var boxnow = 0;
-	$(".FLY .content").css({ display: "none" }).eq(boxnow).css({ display: "block" });
-	$(".FLY .menu span").eq(boxnow).addClass("boxon");
-	$(".FLY .menu span").click(function () {
-		boxnow = $(this).parent().index();
-		$(".FLY .menu li span").removeClass("boxon").eq(boxnow).addClass("boxon");
-		$(".FLY .content").css({ display: "none" }).eq(boxnow).css({ display: "block" });
-	});
-
-	//pull down
-	$(".arrow").hover(function () {
-		$(".pdw").css({ display: "block" });
-	}, function () {
-		$(".pdw").css({ display: "none" });
-	});
-
-	$(".pdw").hover(function () {
-		$(this).css({ display: "block" });
-	}, function () {
-		$(this).css({ display: "none" });
-	});
-
-	//offset
-	$('.dragDiv2 h3').mousedown(function(e){
+﻿$(document).ready(function(){
+	$('.dragDiv2 h3').on('mousedown', function(e){
 		e.preventDefault();
-
-		var $doc = $(document),
-			$selected = $(this).parents('.dragDiv'),
-			$win = $(window),
-			maxL = $win.width() - $selected.width(),
-			maxT = $win.height() - $selected.height(),
+		const $selected = $(this).parent(),
+			offset = $selected.offset(),
+			xDistance = offset.left - e.pageX,
+			yDistance = offset.top - e.pageY,
 			//
-			offset = $selected.offset(), 
-			x = offset.left - e.pageX, 
-			y = offset.top - e.pageY,
-			tx, ty,
-			padding = 5;
-
+			$w = $(window),
+			padding = 15,
+			maxL = $w.width() - $selected.width() - padding,
+			maxT = $w.height() - $selected.height() - padding,
+			//
+			$doc = $(document);
+		
 		$doc.on('mousemove.eason', function(e){
-			tx = e.pageX + x;
-			ty = e.pageY + y;
-			if(tx >= maxL){
-				tx = maxL - padding;
-			}else if(tx <= padding){
-				tx = padding;
-			}
-			if(ty >= maxT){
-				ty = maxT - padding;
-			}else if(ty <= padding){
-				ty = padding;
-			}
-			$selected.css({
-				left: tx, 
-				top: ty
-			});
+			let x = xDistance + e.pageX,
+				y = yDistance + e.pageY;
+			if( x >= maxL ){
+				x = maxL;
+			}else if( x <= padding ){
+				x = padding;
+			};
+			if( y >= maxT ){
+				y = maxT;
+			}else if( y <= padding ){
+				y = padding;
+			};
+			$selected.css({left: x, top: y});
 		}).on('mouseup.eason', function(){
 			$doc.off('.eason');
-		});
+		})
 	});
 });
