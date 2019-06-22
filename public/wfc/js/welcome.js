@@ -1,73 +1,59 @@
-$(function(){
-	// $(".art-list-f2-item").eq(1).find(".art-list-f2-link").addClass("now");
-	// ^ 演示用，請參考
+const perWidth = 265,
+	perGutter = 8,
+	$target = $('.vbox-outer');
 
+// VBOX-LIST WIDTH
+function vboxListWidth(target) {
+	const $item = target.find(".vbox-item"),
+		count = $item.length;
+	$item.css({ width: perWidth, marginRight: perGutter });
+	const width = $item.outerWidth(true) * count - perGutter,
+		height = $item.height();
+	target.find('.vbox').css({ height }).find('.vbox-list').css({ width });
+};
 
-	//// VBOX-LIST WIDTH
-	var perWidth = 265,
-			perGutter = 8,
-			move = ( perWidth + perGutter ) * 2;
-			
-	function vboxListWidth(target) {
-		target.find(".vbox-item").css({ "width": perWidth, "marginRight": perGutter });
-		//
-		var count = target.find(".vbox-item").length,
-			width = (perWidth + perGutter) * count - perGutter;
-		target.find('.vbox-list').css({ "width": width });
-		//
-		target.find('.vbox').css({'height': target.find('.vbox-list').height()});
-	}
-	vboxListWidth($('.target1'));
-	vboxListWidth($('.target2'));
-	vboxListWidth($('.target3'));
-	vboxListWidth($('.target4'));
+// AWD / ADD IS-PC
+function vboxPreNex(target) {
+	$target.addClass('is-pc');
 
+	const $pre = target.find('.vbox-pre'),
+		$nex = target.find('.vbox-nex'),
+		$list = target.find('.vbox-list'),
+		// 
+		move = (perWidth + perGutter) * 2,
+		maxMove = ($list.width() - $('.vbox').width()) * -1;
+	let left = 0;
 
-	//// AWD / ADD IS-PC
-	var nua = navigator.userAgent;
-	if (!/iphone/i.test(nua) && !/ipad/i.test(nua) && !/android/i.test(nua)) {
-		// console.log('is pc');
-		var $target = $('.vbox-outer');
-		$target.addClass('is-pc');
+	// NEX
+	$nex.click(function (e) {
+		$pre.removeClass('is-end').css({ display: 'block' });
+		left -= move;
+		if (left <= maxMove) {
+			left = maxMove;
+			$(this).addClass('is-end');
+		}
+		$list.stop(true, false).animate({ left }, 100);
+		e.preventDefault();
+	});
 
+	// PRE
+	$pre.click(function (e) {
+		$nex.removeClass('is-end');
+		left += move;
+		if (left >= 0) {
+			left = 0;
+			$(this).addClass('is-end');
+		}
+		$list.stop(true, false).animate({ left }, 100);
+		e.preventDefault();
+	})
+};
 
-		var vWidth = $('.vbox').width();
-		// NEX & PRE
-		function vboxPreNex(target){
-			var listWidth = target.find('.vbox-list').width(),
-				maxMove = listWidth - vWidth,
-				allPosi = 0;
-			// NEX
-			target.find('.vbox-nex').click(function(e){
-				target.find('.vbox-pre').removeClass('is-end').css({'display':'block'});
-				var position = allPosi - move;
-				// console.log('%c'+position,'color: red')
-				if(position <= -maxMove){
-					position= -maxMove;
-					$(this).addClass('is-end');
-				}
-				target.find('.vbox-list').stop(true,false).animate({'left': position},500);
-				allPosi = position;
-				e.preventDefault();
-			});
-
-			// PRE
-			target.find('.vbox-pre').click(function(e){
-				var position = allPosi + move;
-				// console.log('%c'+position,'color: green');
-				target.find('.vbox-nex').removeClass('is-end');
-				if(position >= 0){
-					position=0;
-					$(this).addClass('is-end');
-				}
-				target.find('.vbox-list').stop(true,false).animate({'left': position},500);
-				allPosi = position;
-				e.preventDefault();
-			})
-		};
-		vboxPreNex($('.target1'));
-		vboxPreNex($('.target2'));
-		vboxPreNex($('.target3'));
-		vboxPreNex($('.target4'));
-	}
+$(function () {
+	for (i = 0; i < $target.length; i++) {
+		vboxListWidth($target.eq(i));
+		if (!/iphone|ipad|android/i.test(navigator.userAgent)) {
+			vboxPreNex($target.eq(i));
+		}
+	};
 })

@@ -15,30 +15,24 @@
 	<div id="imgContainer">
 		<img id="imageFullScreen" src="img/mvmv/post1.jpg"/>
 	</div>
-	<!-- <a href="" class="mdbBigViewPre"></a>
-	<a href="" class="mdbBigViewNex"></a>
-	<a href="" class="mdbBigViewList">103/120</a> -->
-	<!-- <a href="#" class="mdbBigViewClose"></a> -->
-
 	<script>
 		$(function(){
 			// pinch zoom
-			$('#imageFullScreen').smartZoom({'containerClass':'zoomableContainer'});
+			$('#imageFullScreen').smartZoom({containerClass: 'zoomableContainer'});
 
-			$('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
-				$('#zoomInButton,#zoomOutButton').bind("click", zoomButtonClickHandler);
+			$('#topPositionMap, #leftPositionMap, #rightPositionMap,#bottomPositionMap').on("click", moveButtonClickHandler);
+				$('#zoomInButton ,#zoomOutButton').on("click", zoomButtonClickHandler);
 
 			function zoomButtonClickHandler(e){
-				var scaleToAdd = 0.8;
+				let scaleToAdd = 0.8;
 				if(e.target.id == 'zoomOutButton')
 					scaleToAdd = -scaleToAdd;
 				$('#imageFullScreen').smartZoom('zoom', scaleToAdd);
 			}
 
 			function moveButtonClickHandler(e){
-				var pixelsToMoveOnX = 0;
-				var pixelsToMoveOnY = 0;
-
+				let pixelsToMoveOnX = 0;
+				let pixelsToMoveOnY = 0;
 				switch(e.target.id){
 					case "leftPositionMap":
 						pixelsToMoveOnX = 50;	
@@ -54,10 +48,7 @@
 					break;
 				}
 				$('#imageFullScreen').smartZoom('pan', pixelsToMoveOnX, pixelsToMoveOnY);
-
-				
 			}
-
 		});
 	</script>
 </body>
