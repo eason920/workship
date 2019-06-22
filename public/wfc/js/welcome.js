@@ -52,8 +52,10 @@ function vboxPreNex(target) {
 $(function () {
 	for (i = 0; i < $target.length; i++) {
 		vboxListWidth($target.eq(i));
-		if (!/iphone|ipad|android/i.test(navigator.userAgent)) {
+	};
+	if (!/iphone|ipad|android/i.test(navigator.userAgent)) {
+		for (i = 0; i < $target.length; i++) {
 			vboxPreNex($target.eq(i));
-		}
+		};
 	};
 })
