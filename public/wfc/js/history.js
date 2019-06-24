@@ -1,55 +1,51 @@
+function pWidth(box, state){
+	const width = state.data('width'),
+		paddingWidth = 18,
+		paddingLeft = width + paddingWidth;
+		
+	state.css({ width });
+	box.css({ paddingLeft });
+}
+
 $(function(){
-	// $(".art-list-f2-item").eq(2).find(".art-list-f2-link").addClass("now");
-	// ^ 演示用，請參考
-	
-	// unit status & content , inline width share width
-	if( $(window).width() > 991 + 17 ){
-		function historyShare(){
-			var paddingWidth = 18;
-			var $carnival = $('.carnival-state'),
-				cWidth = $carnival.data('width');
-			$carnival.css({'width':cWidth});
-			$('.carnival-box').css({'paddingLeft': cWidth + paddingWidth});
-			//
-			var $te = $('.te-state'),
-				tWidth = $te.data('width');
-			$te.css({'width':tWidth});
-			$('.te-box').css({'paddingLeft': tWidth + paddingWidth});
-			//
-			var $cap = $('.cap-state'),
-				capWidth = $cap.data('width');
-			$cap.css({'width':capWidth});
-			$('.cap-box').css({'paddingLeft': capWidth + paddingWidth});
-		}
-		historyShare();
-	}
-	
-	// dorp down menu
-	$(".select-drop").selectbox();
+	// 寬 991 + 時，「報名狀態」與「資訊區」排列於同一行
+	// 僅 carnival、te、cap 三單元引用
+	$(window).on('resize', function(){
+		let ww = $(window).width()
+		if( ww > 991 + 17 ){
+			pWidth( $('.carnival-box') ,  $('.carnival-state') );
+			pWidth( $('.cap-box') , $('.cap-state') );
+			pWidth( $('.te-box') , $('.te-state') );
+		}else{
+			$('.carnival-box, .cap-box, .te-box').removeAttr('style');
+		}		
+	})
 
 	// collapse - default
 	setTimeout(function(){
-		$('.collapse-first').find('.layout-collapse-content').slideDown(300);
-		$('.collapse-first').find('.layout-collapse').addClass('open');
+		const target = $('.collapse-first');
+		target.find('.layout-collapse-content').slideDown(300);
+		target.find('.layout-collapse').addClass('open');
 	},600);
+
 	// collapse - action
-	$('.layout-collapse').click(function(){
+	const $collapse = $('.layout-collapse')
+	$collapse.click(function(){
 		$('.layout-collapse-content').slideUp(200);
 		if( !$(this).hasClass('open')){
-			$('.layout-collapse').removeClass('open');
-			$(this).siblings().slideToggle(300);
-			$(this).addClass('open');			
+			$collapse.removeClass('open');
+			$(this).addClass('open').siblings().slideToggle(300);
 		}else{
-			$('.layout-collapse').removeClass('open');
+			$collapse.removeClass('open');
 		}
 	});
 
 	// anchor
-	$('.linkBox a[href*="#"]').on('click', function (e) {
+	$('.linkBox a').on('click', function (e) {
 		e.preventDefault();
 		e.stopPropagation();
-		var target = $(this).attr('href'),
-			offset;
+		const target = $(this).attr('href');
+		let offset;
 		if( $(window).width() >= 768 ){
 			offset = -135;
 		}else{
@@ -67,29 +63,28 @@ $(function(){
 
 	// link box
 	function hisCollapse(btn,target){
-		console.log('active');
 		btn.click(function(){
 			if( !target.find('.layout-collapse').hasClass('open') ){
 				target.find(".layout-collapse").click();
 			}
 		});		
 	}
-	for(var i=1;i<=4;i++){
+	for(i=1;i<=4;i++){
 		hisCollapse($('.link'+i),$('#target'+i));
 	}
 
 	// IS-MAPS ADDRESS
 	$('.is-maps').click(function(){
-		var address = 'https://www.google.com/maps/place/'+$(this).parent().parent().parent().parent().siblings().find('.is-address').html();
-		$(this).attr('href',address);
+		const address = 'https://www.google.com/maps/place/'+$(this).parent().parent().parent().parent().siblings().find('.is-address').html();
+		$(this).attr('href', address);
 	});
 
 	// H-COLLAPSE SLIDE-TOGGLE
 	$('.coll-btn').click(function(e){
-		var temp = $(this).text();
+		const temp = $(this).text();
 		$(this).text($(this).data('text'));
 		$(this).data('text',temp);
-		var target= $(this).parent().parent().parent().parent().parent().siblings().eq(1);
+		const target= $(this).parent().parent().parent().parent().parent().siblings().eq(1);
 		target.slideToggle(300);
 		e.preventDefault();
 	});
