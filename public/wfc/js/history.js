@@ -4,8 +4,19 @@ $(function(){
 	
 	// unit status & content , inline width share width
 	if( $(window).width() > 991 + 17 ){
+
+		const name = ['carnival', 'te', 'cap'];
+		while(name[i]){
+			i = 0;
+			console.log(name[i]);
+			i ++;
+		}
 		function historyShare(){
 			var paddingWidth = 18;
+			
+
+
+
 			var $carnival = $('.carnival-state'),
 				cWidth = $carnival.data('width');
 			$carnival.css({'width':cWidth});
@@ -67,7 +78,6 @@ $(function(){
 
 	// link box
 	function hisCollapse(btn,target){
-		console.log('active');
 		btn.click(function(){
 			if( !target.find('.layout-collapse').hasClass('open') ){
 				target.find(".layout-collapse").click();

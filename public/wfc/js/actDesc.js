@@ -26,27 +26,29 @@ $(function () {
     //
     function countH(target){
         //- !!不可以有兩個子元素同高
-        var $outer = target,
-            h1 = $outer.eq(1).find('.caption').outerHeight(),
-            h2 = $outer.eq(2).find('.caption').outerHeight(),
-            h3 = $outer.eq(3).find('.caption').outerHeight(),
-            h4 = $outer.eq(4).find('.caption').outerHeight();
-        if(h1>=h2 && h1>=h3 && h1>=h4){
-            //- console.log('h1 is highter')
-            $outer.find('.caption').css({'height':h1})
-        }else if(h2>=h1 && h2>=h3 && h3>=h4){
-            //- console.log('h2 is highter')
-            $outer.find('.caption').css({'height':h2})
-        }else if(h3>=h1 && h3>=h2 && h3>=h4){
-            //- console.log('h3 is highter')
-            $outer.find('.caption').css({'height':h3})
-        }else if(h4>=h1 && h4>=h2 && h4>=h3){
-            //- console.log('h4 is highter')
-            $outer.find('.caption').css({'height':h4})
-        }
+        const $outer = target.find('.owl-item'),
+            $caption = target.find('.caption'),
+            h1 = $outer.eq(0).find('.caption').outerHeight(),
+            h2 = $outer.eq(1).find('.caption').outerHeight(),
+            h3 = $outer.eq(2).find('.caption').outerHeight(),
+            h4 = $outer.eq(3).find('.caption').outerHeight();
+        switch(true){
+            case h1>=h2 && h1>=h3 && h1>=h4 :
+                $caption.css({height:h1});
+                break;
+            case h2>=h1 && h2>=h3 && h3>=h4 :
+                $caption.css({height:h2});
+                break;
+            case h3>=h1 && h3>=h2 && h3>=h4 :
+                $caption.css({height:h3});
+                break;
+            case h4>=h1 && h4>=h2 && h4>=h3 :
+                $caption.css({height:h4});
+            default:
+        };
+    };
+    
+    for (i = 0; i < $('.owl-carousel').length; i++) {
+        countH($('.owl-carousel').eq(i));
     }
-    countH( $('.t1 .owl-item') );
-    countH( $('.t2 .owl-item') );
-    countH( $('.t3 .owl-item') );	
-    countH( $('.t4 .owl-item') );
 });
