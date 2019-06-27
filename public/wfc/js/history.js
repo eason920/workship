@@ -1,71 +1,60 @@
+function pWidth(box, state){
+	const width = state.data('width'),
+		paddingWidth = 18,
+		paddingLeft = width + paddingWidth;
+		
+	state.css({ width });
+	box.css({ paddingLeft });
+}
+
 $(function(){
-	// $(".art-list-f2-item").eq(2).find(".art-list-f2-link").addClass("now");
-	// ^ 演示用，請參考
-	
-	// unit status & content , inline width share width
-	if( $(window).width() > 991 + 17 ){
-
+	// 寬 991 + 時，「報名狀態」與「資訊區」排列於同一行
+	// 僅 carnival、te、cap 三單元引用
+	$(window).on('resize', function(){
+		let ww = $(window).width();
 		const name = ['carnival', 'te', 'cap'];
-		while(name[i]){
-			i = 0;
-			console.log(name[i]);
-			i ++;
-		}
-		function historyShare(){
-			var paddingWidth = 18;
-			
+		if( ww > 991 + 17 ){
+			let i = 0;
+			while (name[i]) {
+				pWidth($('.' + name[i] + '-box'), $('.' + name[i] + '-state'));
+				i ++;
+			}
+		}else{
+			let i = 0;
+			while(name[i]) {
+				console.log(name[i]);
+				$('.' + name[i] + '-box').removeAttr('style');
+				i ++;
+			}
+		}		
+	})
 
-
-
-			var $carnival = $('.carnival-state'),
-				cWidth = $carnival.data('width');
-			$carnival.css({'width':cWidth});
-			$('.carnival-box').css({'paddingLeft': cWidth + paddingWidth});
-			//
-			var $te = $('.te-state'),
-				tWidth = $te.data('width');
-			$te.css({'width':tWidth});
-			$('.te-box').css({'paddingLeft': tWidth + paddingWidth});
-			//
-			var $cap = $('.cap-state'),
-				capWidth = $cap.data('width');
-			$cap.css({'width':capWidth});
-			$('.cap-box').css({'paddingLeft': capWidth + paddingWidth});
-		}
-		historyShare();
-	}
-	
-	// dorp down menu
-	$(".select-drop").selectbox();
-
-	// collapse - default
+	// collapse 預設自動開啟排序第一組
 	setTimeout(function(){
-		$('.collapse-first').find('.layout-collapse-content').slideDown(300);
-		$('.collapse-first').find('.layout-collapse').addClass('open');
+		const target = $('.collapse-first');
+		target.find('.layout-collapse-content').slideDown(300);
+		target.find('.layout-collapse').addClass('open');
 	},600);
-	// collapse - action
-	$('.layout-collapse').click(function(){
+
+	// collapse 點擊事件
+	const $collapse = $('.layout-collapse')
+	$collapse.click(function(){
 		$('.layout-collapse-content').slideUp(200);
 		if( !$(this).hasClass('open')){
-			$('.layout-collapse').removeClass('open');
-			$(this).siblings().slideToggle(300);
-			$(this).addClass('open');			
+			$collapse.removeClass('open');
+			$(this).addClass('open').siblings().slideToggle(300);
 		}else{
-			$('.layout-collapse').removeClass('open');
+			$collapse.removeClass('open');
 		}
 	});
 
-	// anchor
-	$('.linkBox a[href*="#"]').on('click', function (e) {
+	// 錨
+	$('.linkBox a').on('click', function (e) {
 		e.preventDefault();
 		e.stopPropagation();
-		var target = $(this).attr('href'),
-			offset;
-		if( $(window).width() >= 768 ){
-			offset = -135;
-		}else{
-			offset = -101;
-		}
+		const target = $(this).attr('href');
+		let offset;
+		$(window).width() >= 768 ? offset = -135 : offset = -101;
 		setTimeout(function(){
 			$(target).velocity('scroll', {
 				duration: 1200,// speed
@@ -84,22 +73,22 @@ $(function(){
 			}
 		});		
 	}
-	for(var i=1;i<=4;i++){
+	for(i=1;i<=4;i++){
 		hisCollapse($('.link'+i),$('#target'+i));
 	}
 
 	// IS-MAPS ADDRESS
 	$('.is-maps').click(function(){
-		var address = 'https://www.google.com/maps/place/'+$(this).parent().parent().parent().parent().siblings().find('.is-address').html();
-		$(this).attr('href',address);
+		const address = 'https://www.google.com/maps/place/'+$(this).parent().parent().parent().parent().siblings().find('.is-address').html();
+		$(this).attr('href', address);
 	});
 
 	// H-COLLAPSE SLIDE-TOGGLE
 	$('.coll-btn').click(function(e){
-		var temp = $(this).text();
+		const temp = $(this).text();
 		$(this).text($(this).data('text'));
 		$(this).data('text',temp);
-		var target= $(this).parent().parent().parent().parent().parent().siblings().eq(1);
+		const target= $(this).parent().parent().parent().parent().parent().siblings().eq(1);
 		target.slideToggle(300);
 		e.preventDefault();
 	});
