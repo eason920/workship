@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eason Shyu 報價專用範例</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <h2 class="numAnimate">0</h2>
+    <input type="text" value="0" id="txtStart" />
+    -
+    <input type="text" value="999999999" id="txtEnd" />
+    <input type="button" value="setNum" onclick="setNum(500);" />
+    <script>
+        const $numAnimate = $('.numAnimate');
+        const countToNumber = function (element, number, suffix, duration) {
+            $({ count: parseInt(element.text().split("+")[0].replace(/\,/g, '')) }).animate({ count: number }, {
+                duration: duration ? duration : 1000,
+                easing: 'swing',
+                step: function (now) {
+                    element.text((Math.floor(now) + suffix).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                },
+                complete: function () {
+                    countingFromZero = false;
+                }
+            });
+        }
+        countToNumber( $numAnimate , 999999999, '', 3000);
+
+        function setNum() {
+            countToNumber( $numAnimate , $("#txtEnd").val(), '', $("#txtStart").val());
+        } 
+    </script>
+</body>
+
+</html>

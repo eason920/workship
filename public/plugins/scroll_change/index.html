@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Eason Shyu 報價專用範例</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<style>
+	  section{
+		  height: 100vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-size: 22px;
+	  }
+	  section:nth-child(1){
+		  background-color: rgb(255, 166, 166)
+	  }
+	  section:nth-child(2){
+		  background-color: rgb(198, 248, 19)
+	  }
+	  section:nth-child(3){
+		  background-color: rgb(19, 145, 248)
+	  }
+  </style>
+</head>
+<body>
+	<div class="main">
+		<section>第 1 頁<br/>滑鼠中鍵滾動以換頁</section>
+		<section>第 2 頁<br/>滑鼠中鍵滾動以換頁</section>
+		<section>第 3 頁<br/>滑鼠中鍵滾動以換頁</section>
+	</div>
+
+	<script>
+		$(".main").onepage_scroll();	
+	</script>
+</body>
+</html>

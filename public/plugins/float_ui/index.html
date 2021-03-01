@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="index.css">
+	<script src="../js/jquery.1.12.4.min.js" type="text/javascript"></script>
+	<title>Eason Shyu 報價專用範例</title>
+</head>
+<body>
+	<div class="movebox movebox1"></div>
+	<div class="movebox movebox2">
+		<h3>壓住右鍵拉動介面</h3>
+	</div>
+	<script>
+		$(function(){
+			let zIndex = 1;
+			$('.movebox1, .movebox2 h3').mousedown(function(e){
+				e.preventDefault();
+				let $selector = null;
+				let x, y;
+				const $this = $(this);
+				const $doc = $(document);
+				const dw = $doc.width();
+				const dh = $doc.height();
+				
+
+				if($this.hasClass('movebox')){
+					$selector = $this;
+				}else{
+					$selector = $this.parents('.movebox');
+				}
+
+				$selector.addClass('moving').css({'zIndex': zIndex ++});
+
+				const offsets = $selector.offset();
+				x = offsets.left - e.pageX;
+				y = offsets.top - e.pageY;
+
+				const soft = 5;
+				const maxL = dw - $selector.width() - soft;
+				const maxT = dh - $selector.height() - soft;
+				$doc.on('mousemove.event', function(e){
+					let tx = x + e.pageX,
+						ty = y + e.pageY,
+						dw = $doc.width();
+					if(tx >= maxL){
+						tx = maxL;
+					}else if(tx <= 0){
+						tx = 0;
+					}
+					if(ty >= maxT){
+						ty = maxT;
+					}else if(ty <= 0){
+						ty = 0;
+					}
+					$selector.css({
+						'left': tx,
+						'top': ty
+					});
+				}).on('mouseup.event', function(){
+					if($selector != null){
+						$doc.off('.event');
+						$selector.removeClass('moving');
+						$selector = null
+					};
+				});
+			});
+		});
+	</script>
+</body>
+</html>

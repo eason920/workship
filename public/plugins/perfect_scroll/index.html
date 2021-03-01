@@ -1,0 +1,95 @@
+<!--DROP THIS FILE INTO YOUR BROWSER TO PREVIEW THE EFFECT-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='width= device-width, initial-scale= 1, user-scalable= no'>
+  <link href='css/perfect-scrollbar.css' rel='stylesheet'>
+  <script src='../js/jquery.1.12.4.min.js'></script>
+  <script src='js/perfect-scrollbar.min.js'></script>
+  <title>Eason Shyu 報價專用範例</title>
+  <style>
+    /* v scrollbar 是否永遠顥示的跟據，而且一定要放外面，不可寫到 .css 中 v */
+    .ps__rail-x,
+    .ps__rail-y {
+      opacity: 0.6;
+    }
+    /* ^ scrollbar 是否永遠顥示的跟據，而且一定要放外面，不可寫到 .css 中 ^ */
+
+    body {
+      background-color: rgba(3, 169, 244, 0.1);
+    }
+
+    #container, .reall-target {
+      background-color: rgb(255, 255, 255);
+      position: relative; /* !! important */
+      margin-bottom: 100px;
+      padding: 0px;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+    <h4>裝飾過的捲動拉bar (視覺細膩) v</h4>
+    <div id='container' class=''>
+      <div class='content'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nisi? Reprehenderit, cum impedit expedita voluptatibus modi, sequi repudiandae in consectetur eligendi autem aperiam voluptatum doloremque similique id doloribus! Error, facere.
+        Reiciendis earum quidem, consectetur natus dolorum soluta sequi autem? Totam repellendus enim odio maxime repellat assumenda laborum nostrum, pariatur voluptatem ducimus! Sequi magni ullam optio nobis reprehenderit consequatur. Doloribus, maiores.
+        Sed illo quasi nobis quae earum eum fuga incidunt accusamus. Labore commodi magni minus hic? Illo corporis pariatur, eos aspernatur cumque quidem! Dolorum incidunt maxime aut ipsam non placeat nostrum!
+        Consequatur asperiores dolorum nostrum dolore omnis, maiores expedita dolor ullam rem iure? Officia aliquid exercitationem omnis atque. Enim, blanditiis unde molestias quod aut repellat ab natus? Aliquid suscipit animi consequuntur.
+        Ex asperiores error similique maxime dolorum expedita? Et ad quis sequi consequuntur. Dolor praesentium corrupti est sed quisquam minus eum nam dolorum corporis? Velit fugiat impedit sapiente vel? Ex, quisquam!
+        Impedit, voluptas tenetur cupiditate dignissimos temporibus dicta a quae vitae voluptates, debitis harum. Eius maxime asperiores atque voluptates voluptatum blanditiis nihil dolorem aut harum accusantium dolor, cum quaerat odio. Rerum.
+        Consectetur fuga distinctio earum corrupti? Sed mollitia atque tempore omnis nam, fugiat earum minus impedit facilis hic soluta. Quia nihil perspiciatis obcaecati sapiente quo cumque esse quis molestias alias debitis?
+        Voluptatem omnis quo explicabo perferendis ab harum saepe, doloremque beatae tempore qui dolorem suscipit molestiae accusamus delectus, exercitationem adipisci modi culpa, nulla tenetur sed. Esse illum veritatis enim distinctio consectetur.
+        At voluptatum nulla deleniti error sequi saepe repellendus, inventore totam reiciendis dolore laboriosam alias, illo a. Repellendus hic reprehenderit, eum ratione porro nisi dolorem velit recusandae pariatur, consequatur fugiat explicabo?
+        Amet, laborum. Suscipit eveniet, deserunt minima dolor placeat, earum repudiandae, amet debitis asperiores exercitationem id necessitatibus reprehenderit quasi sed labore assumenda esse perspiciatis a tempora temporibus ipsum quidem itaque maxime!
+      </div>
+    </div>
+    <h4>一般捲頁拉bar (視覺粗曠) v</h4>
+    <div class="reall-target" >
+      <div class="error-target">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi dolorum nesciunt perspiciatis consequatur fugit aliquam deleniti officiis earum, quod molestiae libero non quos, error fugiat. Natus sit voluptate voluptas!
+        Temporibus quos dignissimos deleniti nihil quas suscipit sint porro amet omnis, hic consequuntur vitae ipsam deserunt aut animi consectetur iste architecto voluptatum culpa dicta qui quaerat esse quasi! Asperiores, pariatur.
+        Esse laudantium eum et ducimus impedit deserunt nostrum consectetur quas. Repellendus accusantium beatae suscipit, hic distinctio a magnam exercitationem aperiam omnis quis, facere illum quaerat ullam natus nesciunt tenetur? Quae?
+        Quibusdam eligendi esse labore iste quam fugiat quaerat obcaecati quis, eos, ipsa doloribus fuga quae nisi quas dicta. A earum ut ullam nihil officia sequi sed totam ducimus eveniet delectus.
+        Voluptatem, officia? Libero voluptatem sint dolore aliquam ex dolorem laborum dolor veritatis nam doloremque. Debitis, quasi veritatis quae error odio, placeat earum modi iusto accusantium quod soluta. Velit, repellat dolores!
+        Voluptatibus non tempore voluptate, cumque quae eius id culpa amet accusamus, porro optio molestiae est perferendis deleniti unde repudiandae et ipsum animi dignissimos! Dicta eius cum perferendis, earum in error.
+        In, reiciendis. Dignissimos ex quisquam repellat in quod voluptatem iusto, eveniet voluptatum, consequatur odio repudiandae perferendis. At a, eum maxime reiciendis consequatur amet id eveniet natus, molestiae unde et voluptas?
+        Facilis fugiat quidem modi aut ratione nam odio veritatis eos quisquam hic, praesentium sapiente! Voluptatem cupiditate quasi, doloribus ullam fugiat illo dignissimos! Repudiandae numquam quas odio harum laborum earum aperiam.
+        Fugiat blanditiis nihil pariatur animi, praesentium adipisci quas totam et tenetur ullam dicta quam a voluptas necessitatibus modi eligendi officiis, harum placeat eius inventore sapiente doloremque. Debitis, et aspernatur. Voluptatem.
+        Aliquid suscipit nulla sequi cumque veniam minima quaerat, provident commodi vitae ea ipsam aperiam. Eaque eum incidunt minima pariatur tempore voluptates officia illo nostrum placeat maxime, delectus numquam laborum unde?
+      </div>
+    </div>
+
+   </section>
+
+  <script>
+    // vv 方法一：直接用 jq 選取 selector，不能定義 scroll top
+    // new PerfectScrollbar('#container');
+    // new PerfectScrollbar('.error-target');
+    // new PerfectScrollbar('.reall-target');
+
+
+    // vv 方法二：需用 js 選取 selector + 可控制 scroll top 方法
+    // 1 不能用 animate 方法，但直接定位 scrollTop 方法可以
+    // 2 選取器要用 javascript ，不可為 jq 
+    // url > http://cly7796.net/wp/javascript/plugin-perfect-scrollbar/
+    let scrollerScrolltop = 100;
+    const $scroller = document.querySelector('#container');
+    new PerfectScrollbar($scroller);
+    $scroller.scrollTop = scrollerScrolltop;
+    // $scroller.animate({scrollTop: scrollerScrolltop});
+
+    // ^v比對
+    // $('.reall-target').scrollTop('200');
+    $('.reall-traget').animate({ scrollTop: 400});
+
+    $('html,body').animate({ scrollTop: 20 }, 'slow');
+  </script>
+
+</body>
+
+</html>
