@@ -11,6 +11,9 @@
 
 	$tag.click(function (e) { e.preventDefault(); })
 
+	$('.menu > a:eq(1)').click();
+	console.log('updated 1100723');
+
 	$(window).on('hashchange', function () {
 		$tag.filter(`[href="${location.hash.substr(1) || $tag.attr('href')}"]`).mouseenter();
 	})
