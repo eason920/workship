@@ -1,6 +1,6 @@
 ﻿$(function () {
 	const $tag = $('.menu > a');
-	$tag.on('mouseenter', function () {
+	$tag.on('click', function () {
 		$('.menu > a.selected').removeClass();
 		$(this).addClass('selected');
 		$('.eason-box').load(
