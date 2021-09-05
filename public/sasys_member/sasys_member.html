@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>sa member</title>
+    <link rel="stylesheet" href="./assets/plugins/datepicker_bs/datepicker.css"/>
+    <link href="./assets/plugins/perfect-scrollbar-master/perfect-scrollbar.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/sasys_member.css"/>
+    <style>
+      input.is-hidden{
+      	display: none
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sambrt">
+      <div class="sambrt-info">
+        <div class="sambrt-box is-title-name"><a class="sambrt-title is-name" href="#">天地有正氣</a>
+          <div class="sambrt-fix">
+            <input class="sambrt-fix-val" type="text" value="黃小美"/>
+            <input class="sambrt-fix-send" type="submit" value="編輯姓名"/><a class="sambrt-fix-back" href="#">取消</a>
+          </div>
+        </div>
+        <div class="sambrt-box is-title-sex"><span>(</span><a class="sambrt-title" href="#">女</a><span>)</span>
+          <div class="sambrt-fix">
+            <select class="sambrt-fix-val">
+              <option value="value">請選擇</option>
+              <option value="0" selected="selected">女</option>
+              <option value="1">男</option>
+            </select>
+            <input class="sambrt-fix-send" type="submit" value="編輯性別"/><a class="sambrt-fix-back" href="#">取消</a>
+          </div>
+        </div>
+        <div class="sambrt-phone">888</div>
+        <ul class="sambrt-box is-title-status">
+          <li class="s-blue">小單</li>
+          <li class="s-green">Promo</li>
+          <li class="s-purple">萌芽</li>
+          <li class="s-red">大單</li>
+          <li class="s-yellow">續約</li>
+          <li class="s-indigo">退費</li>
+        </ul>
+        <div class="sambrt-box is-title-english"><a class="sambrt-title" href="#">english</a>
+          <div class="sambrt-fix">
+            <input class="sambrt-fix-val" type="text" value="尚無英文名"/>
+            <input class="sambrt-fix-send" type="submit" value="編輯英文名"/><a class="sambrt-fix-back" href="#">取消</a>
+          </div>
+        </div>
+      </div>
+      <div class="sambrt-level">A2-5</div>
+      <div class="sambrt-status">合約建置中</div>
+      <ul class="sambr-row is-row2">
+        <li class="sambr-col">
+          <div class="sambr-col-title">負責業務</div>
+          <div class="sambr-col-text">Eason</div>
+        </li>
+        <li class="sambr-col">
+          <div class="sambr-col-title">代理人</div>
+          <div class="sambr-col-text">Easonnn</div>
+        </li>
+        <li class="sambr-col">
+          <div class="sambr-col-title">諮詢師</div>
+          <div class="sambr-col-text">Eason</div>
+        </li>
+        <li class="sambr-col">
+          <div class="sambr-col-title">Demo 老師</div>
+          <div class="sambr-col-text">Eason</div>
+        </li>
+      </ul>
+      <div class="sambrt-right"><span>業務人員</span>：<span class="is-after">陳大明</span><a class="icon-calendar-big" href="#" title="行事曆"></a>
+        <div class="icon-white is-rt"></div>
+      </div>
+    </div>
+    <div class="sambr">
+      <div class="sambr-box">
+        <ul class="sambr-row is-row1" style="min-height: 40px">
+          <li class="sambr-col">
+            <div class="sambr-col-title">
+               剩餘點數<a href="#">點數使用記錄</a></div>
+            <div class="sambr-col-text">780點 約100堂</div>
+          </li>
+          <li class="sambr-col">
+            <div class="sambr-col-title">
+               點數到期日<a href="#">
+                 合約<br/>PDF</a></div>
+            <div class="sambr-col-text">2020/11/11</div>
+          </li>
+          <li class="sambr-col">
+            <div class="sambr-col-title">平台到期日<a href="#">平台加贈</a></div>
+            <div class="sambr-col-text">2020/11/11</div>
+          </li>
+        </ul>
+        <ul class="sambr-row is-row1">
+          <li class="sambr-col is-col1-2">
+            <div class="sambr-col-title">帳號</div>
+            <div class="sambr-col-text is-col1-2-title">fb-transformation@fb.com.twwwww</div>
+            <div class="is-icon icon-setting"></div>
+          </li>
+          <li class="sambr-col is-col1-3">
+            <div class="sambr-col-title">
+               Email<a class="icon-edit sambr-btnbox-item is-copier" href="#">複製Email
+                <div class="satitle-pro-msg">Email己複製</div></a></div>
+            <div class="sambr-col-text">eason@funday.asia</div>
+            <div class="is-icon icon-mail"></div>
+          </li>
+          <li class="sambr-col is-col1-4">
+            <div class="sambr-col-title">電話<a class="sambr-btnbox-item call-on" href="#">撥號</a><a class="sambr-btnbox-item call-off" href="#" style="display: none;">掛斷</a></div>
+            <div class="sambr-col-text">0952-533-746</div>
+            <div class="sambr-col-text">02-8739-2819</div>
+            <div class="is-icon icon-phone"></div>
+          </li>
+        </ul>
+        <div class="sambr-canvas">
+          <div class="canvas-date"><span class="canvas-date-name"></span>資料最後更新時間：<br/><span class="canvas-date-time"> </span> | <a class="canvas-date-btn" href="#">手動更新</a><br/><span class="canvas-date-job">職業：中高階主管</span></div><span class="canvas-date-job">學習目標：職場，1208 上過大會堂 1209 聽過課程報特殊專案50堂一萬 1212 明天確認學習目標：職場，1208 上過大會堂 1209 聽過課程報特殊專案50堂一萬 1212 明天確認</span>
+          <div class="canvars-box1">
+            <div class="canvars-title">學習指標</div>
+            <canvas id="chartRadar" height="180"></canvas>
+            <div class="radar-item ritem0">
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem1"> 
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem2"> 
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem3"> 
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem4"> 
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem5">
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+            <div class="radar-item ritem6"> 
+              <div class="radar-now"></div>
+              <div class="radar-step"></div>
+            </div>
+          </div>
+          <div class="canvas-linebox">
+            <div class="canvas-linebox-group">
+              <div class="canvars-box2" id="chartLine1">
+                <div class="canvars-years"></div>
+                <div class="canvars-title">
+                   總登入數：<span class="canvars-title-num">222</span><span class="canvars-title-w">次</span></div>
+                <canvas height="1" width="1"></canvas>
+              </div>
+              <div class="canvars-box2" id="chartLine2">
+                <div class="canvars-years"></div>
+                <div class="canvars-title">
+                   互動課程：<span class="canvars-title-num">222</span><span class="canvars-title-w">次</span></div>
+                <canvas height="1" width="1"></canvas>
+              </div>
+            </div>
+            <div class="canvas-linebox-group">
+              <div class="canvars-box2" id="chartLine3">
+                <div class="canvars-years"></div>
+                <div class="canvars-title">
+                   聽讀課程：<span class="canvars-title-num">222</span><span class="canvars-title-w">次</span></div>
+                <canvas id="chartLine3" height="1" width="1"></canvas>
+              </div>
+              <div class="canvars-box2" id="chartLine4">
+                <div class="canvars-years"></div>
+                <div class="canvars-title">
+                   學習分鐘數：<span class="canvars-title-num">222</span><span class="canvars-title-w">次</span></div>
+                <canvas height="1" width="1"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sambri">
+          <div class="sambri-bar">
+            <div class="icon-white"></div>
+          </div>
+          <div class="sambri-box">
+            <div class="sambri-item is-blue">
+              <div class="sambri-normal">
+                <div class="sambri-icon icon_glass"></div>
+                <div class="sambri-title">文章閱讀篇數</div>
+              </div>
+              <div class="sambri-middle">
+                <div class="sambri-text">總計  </div>
+                <div class="sambri-num">17</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-text floor2">2019/09/30</div>
+              </div>
+            </div>
+            <div class="sambri-item is-green">
+              <div class="sambri-normal">
+                <div class="sambri-icon icon_class"></div>
+                <div class="sambri-title">上課次數</div>
+              </div>
+              <div class="sambri-middle">
+                <div class="sambri-text">總計 </div>
+                <div class="sambri-num">111</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-text floor2">2019/09/30</div>
+              </div>
+            </div>
+            <div class="sambri-item is-purple">
+              <div class="sambri-top">
+                <div class="sambri-icon icon_login"></div>
+                <div class="sambri-title">登入次數</div>
+              </div>
+              <div class="sambri-middle">
+                <div class="sambri-text">總計 </div>
+                <div class="sambri-num">23</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-text floor2">2019/09/30</div>
+              </div>
+            </div>
+            <div class="sambri-item is-red">
+              <div class="sambri-top">
+                <div class="sambri-icon icon_lastclass"></div>
+                <div class="sambri-title">最後一堂課</div>
+              </div>
+              <div class="sambri-middle">
+                <div class="sambri-text floor1">A2-正規教室_E12235558</div>
+                <div class="sambri-num">Eason</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-text floor2">Funday 文章回顧:新竹小吃打敗紐約市新竹小吃打敗紐約市</div>
+              </div>
+            </div>
+          </div>
+          <div class="sambri-box group2">
+            <div class="sambri-item is-blue">
+              <div class="sambri-mouti">
+                <div class="sambri-title">近7日</div>
+                <div class="sambri-title">近30日</div>
+              </div>
+              <div class="sambri-mouti is-double">
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">最後一篇精讀</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-text floor1" style="margin-bottom: 4px">B1_18405</div>
+                <div class="sambri-text floor1">張忠謀分享管理秘訣張忠謀分享管理秘訣</div>
+              </div>
+              <div class="sambri-mouti is-blockw">
+                <div class="sambri-blockw">理解力</div>
+                <div class="sambri-blockw">聽力</div>
+                <div class="sambri-blockw">測驗</div>
+              </div>
+              <div class="sambri-mouti is-blockw is-triple">
+                <div class="sambri-num">1551</div>
+                <div class="sambri-num">998</div>
+                <div class="sambri-num">1133</div>
+              </div>
+            </div>
+            <div class="sambri-item is-green">
+              <div class="sambri-mouti">
+                <div class="sambri-title">近7日</div>
+                <div class="sambri-title">近30日</div>
+              </div>
+              <div class="sambri-mouti is-double">
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+              </div>
+              <div class="sambri-mouti is-blockw">
+                <div class="sambri-blockw">小班制</div>
+                <div class="sambri-blockw">一對一</div>
+                <div class="sambri-blockw">Coach</div>
+              </div>
+              <div class="sambri-mouti is-blockw is-triple">
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+              </div>
+              <div class="sambri-mouti is-blockw">
+                <div class="sambri-blockw">寫作</div>
+                <div class="sambri-blockw">朗讀</div>
+                <div class="sambri-blockw">錄影檔</div>
+              </div>
+              <div class="sambri-mouti is-blockw is-triple">
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+              </div>
+            </div>
+            <div class="sambri-item is-purple">
+              <div class="sambri-mouti">
+                <div class="sambri-title">近7日</div>
+                <div class="sambri-title">近30日</div>
+              </div>
+              <div class="sambri-mouti is-double">
+                <div class="sambri-num">33</div>
+                <div class="sambri-num">33</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">點數</div>
+              </div>
+              <div class="sambri-mouti is-nw">
+                <div class="sambri-text">剩餘</div>
+                <div class="sambri-num">780</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">已使用/總點數</div>
+              </div>
+              <div class="sambri-mouti is-nw">
+                <div class="sambri-num">20/800</div>
+              </div>
+            </div>
+            <div class="sambri-item is-red">
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">最後聯繫日</div>
+              </div>
+              <div class="sambri-mouit">
+                <div class="sambri-num">2019/11/07</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">諮詢師下次聯繫日</div>
+              </div>
+              <div class="sambri-mouti">
+                <div class="sambri-num">2019/11/16</div>
+              </div>
+              <div class="sambri-normal">
+                <div class="sambri-title is-block">課程返饋</div>
+              </div>
+              <div class="sambri-mouti is-nw">
+                <div class="sambri-num">5</div>
+                <div class="sambri-text">筆</div>
+              </div>
+            </div>
+          </div><span class="sambr-col-title">主檔最後異動時間：2019/11/25 下午 02:51:06 
+            <input class="canvas-date-btn" id="Button2" type="submit" name="Button2" value="手動更新" onclick="return PlzWait();" title="手動更新主檔"/></span>
+        </div>
+      </div>
+      <div class="sambr-box is-right">
+        <div class="sambr-btnbox"><a class="sambr-btnbox-item sablock-open is-area-note" href="#">職業</a><a class="sambr-btnbox-item sablock-open is-area-book" href="#">預約/更新預約</a><a class="sambr-btnbox-item sablock-open is-area-mms" href="#">簡訊</a><a class="sambr-btnbox-item" href="#">點數使用記錄</a><a class="sambr-btnbox-item" href="#">預約更新</a><a class="sambr-btnbox-item" href="#">提醒</a><a class="sambr-btnbox-item" href="#">面談紀錄</a><a class="sambr-btnbox-item" href="#">合約建立</a><a class="sambr-btnbox-item" href="#">名單來源</a><a class="sambr-btnbox-item" href="#">職業</a><a class="sambr-btnbox-item" href="#">Dashboard</a><a class="sambr-btnbox-item" href="#">點數使用記錄</a><a class="sambr-btnbox-item" href="#">預約更新</a><a class="sambr-btnbox-item" href="#">提醒</a><a class="sambr-btnbox-item" href="#">面談紀錄</a><a class="sambr-btnbox-item" href="#">合約建立</a></div>
+        <div class="saarea">
+          <iframe class="saarea-iframe" src="http://intranet.funday.asia/MK_User_From2.aspx?member_id=262455"></iframe>
+        </div>
+        <div class="sablock">
+          <div class="sablock-close"></div>
+          <div class="sambr-editbox">
+            <div class="sambr-editbox-inner">
+              <div class="tmp-select is-tmp-l">
+                <input class="is-hidden" name="key1" type="text" readonly="readonly"/>
+                <div class="tmp-select-title"><b>名單等級</b><span> </span>
+                  <div class="icon-bold"></div>
+                </div>
+                <div class="tmp-select-dropscro" data-dheight="125">
+                  <div class="tmp-select-itembox">
+                    <div class="tmp-select-item" data-value="-1">請選擇</div>
+                    <div class="tmp-select-item" data-value="0">未分級</div>
+                    <div class="tmp-select-item" data-value="A">A</div>
+                    <div class="tmp-select-item" data-value="B">B</div>
+                    <div class="tmp-select-item" data-value="C">C</div>
+                    <div class="tmp-select-item" data-value="D">D</div>
+                    <div class="tmp-select-item" data-value="E">E</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmp-select is-tmp-r">
+                <input class="is-hidden" name="value1" type="text" readonly="readonly"/>
+                <div class="tmp-select-title"> <b>狀態</b><span> </span>
+                  <div class="icon-bold"></div>
+                </div>
+                <div class="tmp-select-dropscro">
+                  <div class="tmp-select-itembox">
+                    <div class="tmp-select-item" data-value="-1">請選擇</div>
+                    <div class="tmp-select-item" data-value="0">未聯絡</div>
+                    <div class="tmp-select-item" data-value="1">無人接聽</div>
+                    <div class="tmp-select-item" data-value="2">無人接聽*5</div>
+                    <div class="tmp-select-item" data-value="3">客戶要求不要再連絡</div>
+                    <div class="tmp-select-item" data-value="4">要再連絡</div>
+                    <div class="tmp-select-item" data-value="5">有意願</div>
+                    <div class="tmp-select-item" data-value="6">預約面試</div>
+                    <div class="tmp-select-item" data-value="7">已出席未成交</div>
+                    <div class="tmp-select-item" data-value="8">合約送審</div>
+                    <div class="tmp-select-item" data-value="9">合約確認</div>
+                    <div class="tmp-select-item" data-value="10">確認成交</div>
+                    <div class="tmp-select-item" data-value="11">退款</div>
+                    <div class="tmp-select-item" data-value="12">錯誤號碼或無此人</div>
+                    <div class="tmp-select-item" data-value="13">Spy</div>
+                    <div class="tmp-select-item" data-value="14">暫時不需要</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmp-select is-tmp-3rd">
+                <input class="is-hidden" name="value1" type="text" readonly="readonly"/>
+                <div class="tmp-select-title"> <b>拷貝文字</b><span> </span>
+                  <div class="icon-bold"></div>
+                </div>
+                <div class="tmp-select-dropscro">
+                  <div class="tmp-select-itembox">
+                    <div class="tmp-select-item" data-value="-1">請選擇</div>
+                    <div class="tmp-select-item" data-value="響底未接">響底未接</div>
+                    <div class="tmp-select-item" data-value="目前沒空，需再聯絡">目前沒空，需再聯絡</div>
+                    <div class="tmp-select-item" data-value="不需要">不需要</div>
+                    <div class="tmp-select-item" data-value="七日內首次關懷">七日內首次關懷									</div>
+                    <div class="tmp-select-item" data-value="七日內二次關懷">七日內二次關懷</div>
+                    <div class="tmp-select-item" data-value="七日內三次關懷">七日內三次關懷</div>
+                  </div>
+                </div>
+              </div>
+              <textarea class="sambr-editbox-textarea" placeholder="請輸入文字"></textarea>
+              <div class="editbox">
+                <input class="sambr-editbox-btn is-btn-green" type="submit" value="送出"/><a class="sambr-editbox-btn is-clear" href="#">清空</a>
+              </div>
+              <div class="sambr-editbox-btnbox">
+                <input class="is-hidden" id="lv" type="text" value="A"/>
+                <input class="is-hidden" id="status" type="text" value="9"/>
+              </div>
+            </div>
+          </div>
+          <div class="sambr-navbox">
+            <div class="sambr-navbox-item active">全部</div>
+            <div class="sambr-navbox-item">電訪筆記</div>
+            <div class="sambr-navbox-item">簡訊</div>
+            <div class="sambr-navbox-item">關懷筆記</div>
+          </div>
+          <div class="sambr-listbox-outer is-arrow-active">
+            <div class="sambr-listbox active">
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+            </div>
+            <div class="sambr-listbox">
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+            </div>
+            <div class="sambr-listbox">
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+            </div>
+            <div class="sambr-listbox">
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/25/2019</span>
+                    <p>14:00</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Eason</span>
+                    <p>徐伊森</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text is-text-green">故天將降大任於是人也，必先苦其心志，勞其筋骨，餓其體膚，空乏其身，行拂亂其所為，所以動心忍性，曾益其所不能。人恒過，然後能改；困於心，衡於慮，而後作；徵於色，發於聲，而後喻。入則無法家拂士，出則無敵國外患者，國恒亡。然後知生於憂患而死於安樂也。</div>
+                </div>
+              </div>
+              <div class="sambr-listbox-item">
+                <div class="sambr-listbox-left">
+                  <div class="sambr-listbox-date"><span>09/26/2019</span>
+                    <p>12:38</p>
+                  </div>
+                  <div class="sambr-listbox-name"><span>Min</span>
+                    <p>陳大明</p>
+                  </div>
+                </div>
+                <div class="sambr-listbox-right">
+                  <div class="sambr-listbox-text">陳大明陳大明陳大明</div>
+                </div>
+              </div>
+              <!-- v repeat-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="salb is-lb-big">
+      <div class="salb-closebox">
+        <div class="icon-close"></div>
+      </div>
+      <h2 class="salb-maintitle"></h2>
+      <iframe src="https://tomato-timer.com/"></iframe>
+    </div><span id="Check_JSONfile">0</span>
+    <script src="./assets/plugins/jquery/jquery-1.12.4-min.js"></script>
+    <script src="./assets/plugins/datepicker_bs/bootstrap-datepicker.js"></script>
+    <script src="./assets/plugins/perfect-scrollbar-master/perfect-scrollbar.min.js"></script>
+    <script src="./assets/tmp/tmp_select.js"></script>
+    <script>
+      let memData = {};
+      const time = '?' + new Date().getTime();
+      $.getJSON('./data/sambr_data/info-1179.json' + time,function(data){
+      	memData = data;
+      	renderFn(memData);
+      });
+      // for floor3
+      function closeLightBox(){
+      	parent.closeLightBox();
+      }
+    </script>
+    <script src="./assets/plugins/chart-js/Chart-2.7.2.min.js"></script>
+    <script src="./js/sasys_text.js"></script>
+    <script src="./js/sasys_member.js"></script>
+    <script src="./js/sasys_member_chart.js"></script>
+  </body>
+</html>
