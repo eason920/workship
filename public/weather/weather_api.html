@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weather api by Eason Shyu</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		body{background:#c9f5ff;}
+		img, p, span{padding:0;margin:0;box-sizing: border-box;}
+		img{
+			height: 150px
+		}
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0
+		}
+		ul.muted li{color: #aaa}
+		li{
+			cursor: pointer;
+			width: calc( 100% / 7 )
+		}
+	</style>
+</head>
+<body>
+	區域切換：
+	<ul>
+		<li>臺北</li>
+		<li>蘇澳</li>
+		<li>彭佳嶼</li>
+		<li>高雄</li>
+		<li>臺中</li>
+	</ul>
+	<br><br>
+	<div class="box">
+		<img/>
+		<div class="box-right">
+			<p>
+				<span class="box-location-name"></span> / <span class="box-parameter"></span>
+			</p>
+			<p>
+				<span class="box-weather-element"></span> 度 / <span class="box-weather"></span>
+			</p>
+		</div>
+	</div>
+	<script>
+		let weatherApiIndex = Number;
+		let weatherApiValue = Number;
+		let weatherIconPath = String;
+		const weatherTypes = {
+			clear: [1],
+			cloudy: [2, 3, 4, 5, 6, 7], //雲
+			cloudy_fog: [25, 26, 27, 28], //雲霧
+			fog: [24], //霧
+			partially_clear_with_rain: [ //部分有雨
+				8, 9, 10, 12,// 排除 11 用 rain.svg 圖
+				13, 14, 19, 20, 29, 30,
+				31, 32, 38, 39,
+			],
+			snowing: [23, 37, 42], //下雪
+			thunderstorm: [15, 16, 17, 18, 21, 22, 33, 34, 35, 36, 41] //大雷雨
+		};
+
+		const getInfo = function(location){
+			$.ajax({
+				type: "GET",
+				// url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=CWB-FF2748BD-4084-4695-932A-5835ED84FD10&format=JSON&locationName=" + location,
+				url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=CWB-FF2748BD-4084-4695-932A-5835ED84FD10&locationName=" + location + "&parameterName=CITY",
+				success(res){
+					// console.log('氣象局 ',res);
+					// --------------------------------
+					// -- 取得動態氣象資料 v
+					// --------------------------------
+					const location = res.records.location[0];
+					console.log('location > ', location);
+					const viewData = {
+						locationName: location.locationName,
+						weatherElement: location.weatherElement[3].elementValue,
+						Weather: location.weatherElement[20].elementValue,
+						parameter: location.parameter[0].parameterValue
+					}
+					// for test vv
+					// viewData.Weather = "短暫陣雨或雷雨有霧";
+					// for test^^
+					console.log('view data is > ', viewData);
+
+					$.ajax({
+						type: "GET",
+						url: "weather.json",
+						success(res){
+							// --------------------------------
+							// -- get WEATHER API VALUE v
+							// --------------------------------
+							console.log("weather api res is ", res);
+							weatherApiIndex = res.findIndex(function(item){
+								return viewData.Weather == item.ch
+							});
+							console.log('>>>', weatherApiIndex);
+							weatherApiValue = res[weatherApiIndex].value;
+							// for test vv
+							// weatherApiValue = 11;
+							// for test ^^
+							console.log('weatherApiIndex is ', weatherApiIndex, ' / weatherApiValue is ', weatherApiValue);
+
+							// --------------------------------
+							// -- get WEATHER API PATH
+							// --------------------------------
+							if( weatherApiValue !== 11 ){
+								// NOT RAIN v
+								// PATH v
+								let path = String;
+								for( a in weatherTypes ){
+									const i =	weatherTypes[a].findIndex(function(item){
+										return item == weatherApiValue
+									});
+									if( i >= 0 ){ path = a };
+								};
+								
+								// DAY OR NIGHT v
+								let hours = new Date().getHours();
+								// for test vv
+								// hours = 18;
+								// for test ^^
+								const DN = hours - 18 >= 0 ? 'night' : 'day';
+								console.log('now is ', DN);
+
+								weatherIconPath = DN + '/' + path + '.svg'
+							}else{
+								// IS RAIN v
+								weatherIconPath = 'rain.svg'
+							}
+							
+							// --------------------------------
+							// -- FINISH v
+							// --------------------------------
+							console.log('weather icon path is ', weatherIconPath);
+							$('img').attr('src', './images/' + weatherIconPath);
+							$(".box-location-name").text(viewData.locationName);
+							$(".box-weather-element").text(viewData.weatherElement);
+							$(".box-weather").text(viewData.Weather);
+							$(".box-parameter").text(viewData.parameter);
+						},
+						error(){
+							console.log('weather.json 在本機測反而被認定作跨域請求(CORS)，線上則沒此問題');
+						}
+					});
+				}
+			})
+		};
+
+		function eason(data){
+			// console.log('is jsonp >', data);
+		}
+		
+		$(()=>{
+			$('li').click(function(){
+				const location = $(this).text();
+				console.log(location);
+				getInfo(location);
+			});
+			getInfo('臺北');
+		});
+	</script>
+</body>
+</html>
+<script src="https://json2jsonp.com/?url=https%3A%2F%2Fopendata.cwb.gov.tw%2Fapi%2Fv1%2Frest%2Fdatastore%2FO-A0003-001%3FAuthorization%3DCWB-FF2748BD-4084-4695-932A-5835ED84FD10%26locationName%3D%25E9%25AB%2598%25E9%259B%2584%26parameterName%3DCITY&eason=callback"></script>
