@@ -33,12 +33,12 @@
 	line-height: 31px;
 	float: left;
 	cursor: pointer;
-	padding: 5px 10px;
+	padding: 5px 7px;
 	margin-right: 3px;
 	color: #fff;
 	background-color: #a48f42;
 	border-radius: 8px 8px 0 0;
-	font-size: 16px;
+	font-size: 15px;
 	text-decoration: none;
 	transition: color .5s, background-color .5s
 }
