@@ -59,7 +59,9 @@
 @media (max-width: 991px) {
 	.menu>a {
 		padding-left: 12px;
-		padding-right: 12px
+		padding-right: 12px;
+		border-radius: 8px;
+		margin-bottom: 6px;
 	}
 }
 
