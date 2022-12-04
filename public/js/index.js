@@ -11,7 +11,7 @@
 
 	$tag.click(function (e) { e.preventDefault(); })
 
-	$('.menu > a:eq(1)').click();
+	$('.menu > a:eq(0)').click();
 
 	$(window).on('hashchange', function () {
 		$tag.filter(`[href="${location.hash.substr(1) || $tag.attr('href')}"]`).click();
